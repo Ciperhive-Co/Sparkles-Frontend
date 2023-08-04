@@ -1,0 +1,26 @@
+.carousel {
+    max-height: 400px; /* Adjust the maximum height as desired */
+    margin: 0 auto; /* Center the carousel horizontally */
+    overflow: hidden; /* Hide any overflow content */
+  }
+  
+  .carousel-inner {
+    display: flex; /* Use flex display for the carousel items */
+    align-items: center; /* Center the items vertically */
+  }
+  
+  
+  .carousel-item img {
+    max-height: 100%; /* Make sure the image height fits within the carousel item */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+ 
+    .carousel-caption {
+        position: absolute; /* Position the caption absolutely within the carousel item */
+       top:0;
+       
+        align-items: center; 
+        color: white; /* Set the text color to white */
+       
+      
+  }
