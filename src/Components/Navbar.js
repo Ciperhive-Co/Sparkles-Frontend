@@ -26,7 +26,7 @@ const Navbar = () => {
     <div className='FullNavbar'>
     <nav className="navbar">
       <div className="navbar-left">
-        <a href="#">
+        <a href="/">
           <img src={logo} alt="Your Logo" className="logo" />
         </a>      
       </div>
