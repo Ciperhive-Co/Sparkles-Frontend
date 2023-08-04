@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min'; 
 import './Slider.css'; // You can style the carousel in this CSS file
-
 export default function Slider() {
   
   return(
