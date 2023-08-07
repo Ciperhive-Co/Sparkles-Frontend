@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Navbar from './Components/Navbar';
 import Slider from './Components/Slider';
+import Shop from './Components/Shop';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-
 
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
       )}
       <Navbar />
       <Slider/>
+      <Shop/>
     </div>
   );
 }

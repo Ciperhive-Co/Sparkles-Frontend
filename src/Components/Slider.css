@@ -1,5 +1,6 @@
 .carousel {
     max-height: 600px; /* Adjust the maximum height as desired */
+    max-height: 600px; /* Adjust the maximum height as desired */
     margin: 0 auto; /* Center the carousel horizontally */
     overflow: hidden; /* Hide any overflow content */
   }
@@ -14,13 +15,5 @@
     max-height: 100%; /* Make sure the image height fits within the carousel item */
     margin: 0 auto; /* Center the image horizontally */
   }
- 
-    .carousel-caption {
-        position: absolute; /* Position the caption absolutely within the carousel item */
-       top:0;
-       
-        align-items: center; 
-        color: white; /* Set the text color to white */
-       
-      
-  }
+
+

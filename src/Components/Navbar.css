@@ -4,11 +4,23 @@ body {
     box-sizing: border-box;
   }
 
-  .FullNavbar {
+  .sticky + body {
+    padding-top: 102px;
+  }
+  
+  #FullNavbar {
     display: flex;
     flex-direction: column;
   }
-  
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 2000;
+    background-color: white;
+  }
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -24,18 +36,36 @@ body {
   }
   
   .logo {
+    width: 180px;
+    height: auto;
+    margin-left: 5%;
+    margin-top: -15%;
+  }
+
+  .logoS{
     width: 150px;
     height: auto;
+    margin-left: 5%;
+    margin-top: -2.5%;
+  }
+
+  .location {
+    width: 90px;
+    height: auto;
+    margin-left: 10%;
+    margin-top: -40%;
   }
   
   .navbar-middle {
     flex: 3;
     display: flex;
     justify-content: center;
+    margin-top: -2.5%;
+    margin-left: 2%;
   }
   
   .navbar-middle input[type="text"] {
-    width: 75%;
+    width: 85%;
     padding: 8px;
     font-size: 16px;
     background-color: lightgrey;
@@ -48,10 +78,11 @@ body {
     flex: 1;
     display: flex;
     justify-content: space-evenly;
+    margin-top: -2.5%;
   }
   
   .login-btn,
-  .cart-btn {
+  .cart-btn  {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,6 +93,20 @@ body {
     cursor: pointer;
     font-family: 'Bebas Neue';
     font-weight: bold;
+  }
+  .location-btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: black;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Bebas Neue';
+    font-weight: bold;
+    margin-left: 20%;
+    margin-top: -10%;
   }
   
   .cart-btn-text {
@@ -105,5 +150,8 @@ body {
     display: flex;
     width: 100%;
     gap: 30px;
+    background-color: lightgrey;
+    margin-top: -1.5%;
+    border-top: 2px solid #24245a;
   }
   

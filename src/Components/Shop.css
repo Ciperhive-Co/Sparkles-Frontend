@@ -40,8 +40,9 @@
   color: rgba(0, 0, 0, 0.8);
   opacity:100%;
   border-bottom: #000;
-  
+
 }
+
 
 .category-line {
   position: absolute;
@@ -61,50 +62,60 @@
 
 .d-flex {
   display: flex;
-  justify-content: space-between;
-  gap: 5px;
+  justify-content: space-around;
   margin: 50px;
-  opacity: 0; /* Start with opacity 0 to hide the cards initially */
-  animation: fadeIn 1s ease forwards; /* Apply animation to fade in the cards */
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1; /* Transition the opacity to 1 to fade in the cards */
-  }
 }
 
 .product-card {
-  width: calc(15% - 20px);
+  width: calc(22% - 20px);
   height: 12rem;
-  margin: 10px;
-  padding: 10px;
   border-radius: 5px;
   text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   transform: translateY(20px); /* Initial position to slide the card from bottom */
   transition: transform 0.5s, box-shadow 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards; /* Apply animation to fade in the cards */
+  font-family: 'Bebas Neue', sans-serif;
 }
+
+.product-card.fade-in {
+  opacity: 0; /* Start with opacity 0 to hide the cards initially */
+  animation: fadeInDelay 1s ease forwards; /* Apply animation with delay to fade in the cards */
+}
+
+@keyframes fadeInDelay {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(20px); /* Initial position to slide the cards from bottom */
+  }
+  100% {
+    opacity: 1; /* Transition the opacity to 1 to fade in the cards */
+    transform: translateY(0); /* Move cards to their final position */
+  }
+}
+
 
 .product-card:hover {
   transform: translateY(-5px);
 }
 
-/* Apply delay to each product card to show one by one */
-.product-card:nth-child(1) {
-  animation-delay: 0.3s;
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px; 
 }
 
-.product-card:nth-child(2) {
-  animation-delay: 0.4s;
+.newprice {
+  color: red;
+  margin-right: 5px; 
 }
 
-.product-card:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-.product-card:nth-child(4) {
-  animation-delay: 0.6s;
+.oldprice {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min'; 
 import './Shop.css';
@@ -7,26 +7,34 @@ export default function Shop() {
   const categories = [
     {
       name: 'BEST SELLERS',
-      products: [
+      products: [ 
         {
           title: 'Product 1',
+          description: 'This is the description of the product',
           image: './assets/graphene.webp',
-          price: '$20.00',
+          oldprice: '$20.00',
+          newprice: 'From $0.00',
         },
         {
           title: 'Product 2',
+          description: 'This is the description of the product',
           image: './assets/graphene.webp',
-          price: '$10.00',
+          oldprice: '$10.00',
+          newprice: 'From $0.00',
         },
         {
           title: 'Product 3',
+          description: 'This is the description of the product',
           image: './assets/graphene.webp',
-          price: '$19.00',
+          oldprice: '$19.00',
+          newprice: 'From $0.00',
         },
         {
           title: 'Product 4',
+          description: 'This is the description of the product',
           image: './assets/graphene.webp',
-          price: '$17.00',
+          oldprice: '$17.00',
+          newprice: 'From $0.00',
         },
       ],
     },
@@ -35,23 +43,31 @@ export default function Shop() {
       products: [
         {
           title: 'Product 1',
+          description: 'This is the description of the product',
           image: './assets/claybarkit.webp',
-          price: '$20.00',
+          oldprice: '$20.00',
+          newprice: 'From $0.00',
         },
         {
           title: 'Product 2',
+          description: 'This is the description of the product',
           image: './assets/claybarkit.webp',
-          price: '$10.00',
+          oldprice: '$10.00',
+          newprice: 'From $0.00',
         },
         {
           title: 'Product 3',
+          description: 'This is the description of the product',
           image: './assets/claybarkit.webp',
-          price: '$19.00',
+          oldprice: '$19.00',
+          newprice: 'From $0.00',
         },
         {
           title: 'Product 4',
+          description: 'This is the description of the product',
           image: './assets/claybarkit.webp',
-          price: '$17.00',
+          oldprice: '$17.00',
+          newprice: 'From $0.00',
         },
       ],
     },
@@ -60,58 +76,92 @@ export default function Shop() {
       products: [
         {
           title: 'Product 1',
+          description: 'This is the description of the product',
           image: './assets/cleaningbrush.webp',
-          price: '$20.00',
+          oldprice: '$20.00',
+          newprice: 'From $0.00',
         },
         {
           title: 'Product 2',
+          description: 'This is the description of the product',
           image: './assets/cleaningbrush.webp',
-          price: '$10.00',
+          oldprice: '$10.00',
+          newprice: 'From $0.00',
         },
         {
           title: 'Product 3',
+          description: 'This is the description of the product',
           image: './assets/cleaningbrush.webp',
-          price: '$19.00',
+          oldprice: '$19.00',
+          newprice: 'From $0.00',
         },
         {
           title: 'Product 4',
+          description: 'This is the description of the product',
           image: './assets/cleaningbrush.webp',
-          price: '$17.00',
+          oldprice: '$17.00',
+          newprice: 'From $0.00',
         },
       ],
     },
   ];
 
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+  const [activeButtonIndex, setActiveButtonIndex] = useState(0);
+  const [fadeIn, setFadeIn] = useState(false);
 
-  
+  useEffect(() => {
+    setFadeIn(true); // Trigger the fade-in animation when the component mounts
+  }, [selectedCategory]);
+
+  const handleClick = (category, index) => {
+    setSelectedCategory(category);
+    setActiveButtonIndex(index);
+    setFadeIn(false); // Reset fade-in state to trigger animation when changing categories
+    setTimeout(() => {
+      setFadeIn(true); // Set fade-in state after a short delay to trigger animation
+    }, 100);
+  };
+
   return (
     <>
       <div className="shop-heading">
         <h1>SHOP</h1>
       </div>
-      
+
       <div className="categories">
-        {categories.map((category, index) => (
-          <button
-            key={index}
-            className={`category-button ${selectedCategory === category ? 'active' : ''}`}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category.name}
-          </button>
-        ))}
+        {categories.map((category, index) => {
+          const buttonClass = `category-button ${index === activeButtonIndex ? 'active' : ''}`;
+          return (
+            <button
+              key={index}
+              className={buttonClass}
+              onClick={() => handleClick(category, index)}
+            >
+              {category.name}
+              <div className="category-line"></div>
+            </button>
+          );
+        })}
       </div>
-      
+
       <div className="d-flex">
         {selectedCategory.products.map((product, index) => (
-          <div key={index} className="product-card">
+          <div
+            key={index}
+            className={`product-card ${fadeIn ? 'fade-in' : ''}`}
+            style={{ animationDelay: `${index * 0.2}s` }}
+          >
             <div className="card-body">
               <img src={product.image} className="card-img-top" alt={product.title} />
-              <h5 className="card-title">{product.title}</h5>
-              <p className="card-text">{product.price}</p>
+              <h4 className="card-title">{product.title}</h4>
+              <p className="card-description">{product.description}</p>
+              <div className="price">
+                <p className="newprice">{product.newprice}</p>
+                <p className="oldprice">{product.oldprice}</p>
+              </div>
               <a href="#" className="btn btn-primary">
-                Go somewhere
+                Shop Now
               </a>
             </div>
           </div>
@@ -119,4 +169,4 @@ export default function Shop() {
       </div>
     </>
   );
-};
+}
