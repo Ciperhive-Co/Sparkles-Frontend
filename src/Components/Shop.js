@@ -160,7 +160,7 @@ export default function Shop() {
                 <p className="newprice">{product.newprice}</p>
                 <p className="oldprice">{product.oldprice}</p>
               </div>
-              <a href="#" className="btn btn-primary">
+              <a href="/" className="btn btn-primary">
                 Shop Now
               </a>
             </div>
