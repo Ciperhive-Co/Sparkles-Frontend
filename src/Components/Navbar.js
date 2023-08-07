@@ -49,7 +49,6 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <a href="/">
-<<<<<<< HEAD
           <img src={logo} alt="Your Logo" className={`logo ${isSticky ? 'logoS' : ''}`}/>
         </a>       
       </div>
@@ -58,10 +57,6 @@ const Navbar = () => {
           <img src={location} alt="Your location" className="location" />
       </a> 
       <div className='location-btn-text'>FIND A STORE</div>
-=======
-          <img src={logo} alt="Your Logo" className="logo" />
-        </a>      
->>>>>>> ebbf0118853e93c2865b31f1cd8850d6843b7f17
       </div>
       <div className="navbar-middle">
         <input type="text" placeholder="Search..." />
