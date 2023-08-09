@@ -160,6 +160,12 @@ export default function Shop() {
                 <p className="newprice">{product.newprice}</p>
                 <p className="oldprice">{product.oldprice}</p>
               </div>
+<<<<<<< HEAD
+=======
+              <a href="/" className="btn btn-primary">
+                Shop Now
+              </a>
+>>>>>>> 822153f72f00b6dd22cc05775d74d7032cb45704
             </div>
           </div>
         ))}
