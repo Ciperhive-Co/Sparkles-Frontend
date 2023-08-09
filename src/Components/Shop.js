@@ -150,7 +150,7 @@ export default function Shop() {
           <div
             key={index}
             className={`product-card ${fadeIn ? 'fade-in' : ''}`}
-            style={{ animationDelay: `${index * 0.2}s` }}
+            style={{ animationDelay: `${index * 0.1}s` }}
           >
             <div className="card-body">
               <img src={product.image} className="card-img-top" alt={product.title} />
@@ -160,9 +160,6 @@ export default function Shop() {
                 <p className="newprice">{product.newprice}</p>
                 <p className="oldprice">{product.oldprice}</p>
               </div>
-              <a href="#" className="btn btn-primary">
-                Shop Now
-              </a>
             </div>
           </div>
         ))}

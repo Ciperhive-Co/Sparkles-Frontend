@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css';
-import logo from './logo1.png'
+import logo from './logo.png'
 import location from './location.png'
 import { FaShoppingCart } from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,7 +12,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const header = document.getElementById("navmenu");
+      const header = document.getElementById("promotion");
       const sticky = header.offsetTop;
 
       if (window.pageYOffset > sticky) {

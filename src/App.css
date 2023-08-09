@@ -44,3 +44,13 @@
     font-size: 15px;
   }
 }
+
+.mainWrapper {
+  margin-top: 5%;
+  display: flex;
+}
+
+.contentWrapper {
+  margin: auto;
+  width: 70%;
+}

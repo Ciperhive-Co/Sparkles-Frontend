@@ -76,15 +76,15 @@
   justify-content: space-around;
   transform: translateY(20px); /* Initial position to slide the card from bottom */
   transition: transform 0.5s, box-shadow 0.5s;
+  animation: transform 0.2s ease-in-out;
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1s ease forwards; /* Apply animation to fade in the cards */
   font-family: 'Bebas Neue', sans-serif;
+  cursor: pointer;
 }
 
 .product-card.fade-in {
   opacity: 0; /* Start with opacity 0 to hide the cards initially */
-  animation: fadeInDelay 1s ease forwards; /* Apply animation with delay to fade in the cards */
+  animation: fadeInDelay 0.5s ease forwards; /* Apply animation with delay to fade in the cards */
 }
 
 @keyframes fadeInDelay {
@@ -98,10 +98,6 @@
   }
 }
 
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
 
 .price {
   display: flex;

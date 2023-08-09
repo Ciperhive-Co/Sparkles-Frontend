@@ -1,6 +1,5 @@
 .carousel {
-    max-height: 600px; /* Adjust the maximum height as desired */
-    max-height: 600px; /* Adjust the maximum height as desired */
+    max-height: 800px; /* Adjust the maximum height as desired */
     margin: 0 auto; /* Center the carousel horizontally */
     overflow: hidden; /* Hide any overflow content */
   }
