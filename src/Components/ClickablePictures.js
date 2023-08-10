@@ -1,5 +1,5 @@
 import React from 'react';
-import './ClickablePictures.css'; 
+import './ClickablePictures.css'; // Create a CSS file for styling
 
 const ClickablePictures = () => {
   return (

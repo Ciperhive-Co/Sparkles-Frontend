@@ -6,7 +6,7 @@
     height: 85vh;
     padding: 0 100px; /* Add the left and right border space */
     box-sizing: border-box; /* Include padding in the total width */
-    margin-top: 10%;
+   
   }
   
   .image-container {

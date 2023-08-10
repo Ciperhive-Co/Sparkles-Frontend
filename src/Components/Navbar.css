@@ -52,10 +52,10 @@ body {
   }
   
   .logo {
-    width: 150px;
+    width: 180px;
     height: auto;
-    margin-left: 5%;
-    margin-top: -2.5%;
+    margin-left: 50px;
+    margin-top: -15%;
   }
 
   .location {

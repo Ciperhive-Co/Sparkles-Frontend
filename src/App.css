@@ -7,6 +7,24 @@
   font-family: "HK Grotesk Legacy";
 }
 
+.mainWrapper{
+  display: flex;
+  margin-top: 10%;
+}
+.Wrapper{
+  height: 70%;
+  width: 70%;
+  margin:auto;
+}
+
+.instaHeading{
+  margin-top: 15%;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: bolder;
+  font-size: 36px;
+}
+
 .promotional-bar {
   background-color: #24245a;
   padding-top: 10px;
@@ -43,14 +61,4 @@
   .promotional-bar {
     font-size: 15px;
   }
-}
-
-.mainWrapper {
-  margin-top: 5%;
-  display: flex;
-}
-
-.contentWrapper {
-  margin: auto;
-  width: 70%;
 }
