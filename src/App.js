@@ -40,7 +40,7 @@ function App() {
         </div>
       </div>
       <BlogSection />
-      <div className="instaHeading">@ETHOSCARCARE</div>
+      <div className="instaHeading">@Sparkles.co</div>
       <ImageReel />
     </div>
   );
