@@ -76,7 +76,7 @@ const openPreview = (index) => {
         >
            <img
             src={image}
-            alt={`Image ${index}`}
+            alt={`${index}`}
             className="image"
           />
           <div className="overlay">
@@ -101,9 +101,9 @@ const openPreview = (index) => {
                 <i className="fab fa-instagram" />
               </div>
               <div className="username">
-                <a href="#">{captions[selectedImageIndex].username}</a>
+                <a href="/">{captions[selectedImageIndex].username}</a>
                 <div className="description">
-                <a href="#">{captions[selectedImageIndex].description}</a>
+                <a href="/">{captions[selectedImageIndex].description}</a>
                 </div>
               </div>
               </div>
