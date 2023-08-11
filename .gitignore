@@ -8,6 +8,10 @@ node_modules
 # testing
 /coverage
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 23657ad28fc8b52b14db64970449fd9d3a5141f5
 # misc
 .DS_Store
 .env.local

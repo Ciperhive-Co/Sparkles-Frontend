@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.87474be8.css",
+    "main.js": "/static/js/main.e53d8df1.js",
+    "static/js/787.7c6f5b3c.chunk.js": "/static/js/787.7c6f5b3c.chunk.js",
+    "static/media/clean-car.png": "/static/media/clean-car.e1d51d553cca2c26c9c4.png",
+    "static/media/dirty-car.png": "/static/media/dirty-car.f848808b2b6ba63073a0.png",
+    "static/media/logo.png": "/static/media/logo.c39a43ac095b648a9888.png",
+    "static/media/location.png": "/static/media/location.15c866d911b0ba89f292.png",
+    "static/media/bebas-neue-latin-400-normal.woff2": "/static/media/bebas-neue-latin-400-normal.4352f3c0f3586c850c24.woff2",
+    "static/media/bebas-neue-latin-400-normal.woff": "/static/media/bebas-neue-latin-400-normal.35d44c0962992ff863c1.woff",
+    "static/media/bebas-neue-latin-ext-400-normal.woff2": "/static/media/bebas-neue-latin-ext-400-normal.99be330d826b8dba922c.woff2",
+    "static/media/bebas-neue-latin-ext-400-normal.woff": "/static/media/bebas-neue-latin-ext-400-normal.40ecee6e5fd01923295f.woff",
+    "index.html": "/index.html",
+    "main.87474be8.css.map": "/static/css/main.87474be8.css.map",
+    "main.e53d8df1.js.map": "/static/js/main.e53d8df1.js.map",
+    "787.7c6f5b3c.chunk.js.map": "/static/js/787.7c6f5b3c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.87474be8.css",
+    "static/js/main.e53d8df1.js"
+  ]
+}
