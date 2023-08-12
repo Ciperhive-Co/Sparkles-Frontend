@@ -66,6 +66,7 @@ const Navbar = () => {
   };
 
   return (
+<<<<<<< HEAD
     <>
       {smallScreen ? (
         <div id="FullNavbar" className={isSticky ? "sticky" : ""}>
@@ -81,6 +82,47 @@ const Navbar = () => {
                   }}
                 />
               </div>
+=======
+
+    <div id='FullNavbar' className={isSticky ? 'sticky' : ''}>
+    <nav className="navbar">
+      <div className="navbar-left">
+        <a href="/">
+          <img src={logo} alt="Your Logo" className={`logo ${isSticky ? 'logoS' : ''}`}/>
+        </a>       
+      </div>
+      <div>
+      <a href="/">
+          <img src={location} alt="Your location" className="location" />
+      </a> 
+      <div className='location-btn-text'>FIND A STORE</div>
+      </div>
+      <div className="navbar-middle">
+        <input type="text" placeholder="Search..." />
+      </div>
+      <div className="navbar-right">
+        <div className='child1'>
+        <button className="login-btn"> 
+        <FontAwesomeIcon icon={faUser} style={{ fontSize: '48px', color: '#24245a' }} />
+        <div className='login-btn-text'>Log in</div>
+        </button>
+        </div>
+
+        <div className='child2'>
+        <button className="cart-btn"> 
+        <FaShoppingCart style={{ fontSize: '48px', color: '#24245a' }} />
+        <div className='cart-btn-text'>Cart</div>
+        </button>
+        </div>
+      </div>
+    </nav>
+    <div id="navmenu" className="navbar-menu">
+        {menuItems.map((item) => (
+          <div key={item} className="menu-item" onClick={() => handleMenuItemClick(item)}>
+            {item}
+            <div className="dropdown-menu">
+              {/* Dropdown menu content goes here */}
+>>>>>>> 1c32747e2c1101333f5deecf8736eb9f9a196f07
             </div>
             <div className="navbar-middle">
               <a href="/">

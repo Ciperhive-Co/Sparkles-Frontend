@@ -8,7 +8,10 @@ import Slider from './Components/Slider';
 import Shop from './Components/Shop';
 import BlogSection from './Components/BlogSection';
 import ImageReel from './Components/ImageReel';
+<<<<<<< HEAD
  import Footer from './Components/Footer';
+=======
+>>>>>>> 1c32747e2c1101333f5deecf8736eb9f9a196f07
 import ReactCompareImage from 'react-compare-image';
 import ClickablePictures from './Components/ClickablePictures';
 
@@ -88,7 +91,10 @@ function App() {
       <BlogSection />
       <div className="instaHeading">@Sparkles.co</div>
       <ImageReel />
+<<<<<<< HEAD
       <Footer />
+=======
+>>>>>>> 1c32747e2c1101333f5deecf8736eb9f9a196f07
     </div>
   );
 }
