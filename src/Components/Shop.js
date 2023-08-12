@@ -111,20 +111,20 @@ export default function Shop() {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
-    setFadeIn(true); // Trigger the fade-in animation when the component mounts
+    setFadeIn(true);
   }, [selectedCategory]);
 
   const handleClick = (category, index) => {
     setSelectedCategory(category);
     setActiveButtonIndex(index);
-    setFadeIn(false); // Reset fade-in state to trigger animation when changing categories
+    setFadeIn(false);
     setTimeout(() => {
-      setFadeIn(true); // Set fade-in state after a short delay to trigger animation
+      setFadeIn(true);
     }, 100);
   };
 
   return (
-    <>
+    <div className="shop-container">
       <div className="shop-heading">
         <h1>SHOP</h1>
       </div>
@@ -164,6 +164,6 @@ export default function Shop() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

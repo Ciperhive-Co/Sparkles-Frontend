@@ -1,0 +1,137 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    
+    margin-top: 50px;
+   
+  }
+  
+  .column {
+    flex: 1;
+    padding: 0 20px;
+    margin-left: 20px;
+    color: #333;
+  }
+  
+  .logo {
+    margin-top: 0px;
+    max-width: 130px;
+    height: auto;
+  }
+  
+  .heading{
+    margin-bottom: 20px;
+  }
+  
+  .email-input {
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  .email-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .email-input label {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 12px;
+    color: #aaa;
+    pointer-events: none;
+    transition: top 0.2s, font-size 0.2s;
+  }
+  
+  .email-input.focused label {
+    top: -13px;
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .social-icons {
+    display: flex;
+    margin-top: 20px;
+
+  }
+  
+  .facebook {
+    width: 30px;
+    height: 30px;
+ 
+    margin-right: 10px;
+  }
+  .instagram {
+    width: 30px;
+    height: 30px;
+    
+    margin-right: 10px;
+  }
+  
+  .youtube {
+    
+    width: 30px;
+    height: 30px;
+   
+    margin-right: 10px;
+  }
+  .quick-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .quick-links li {
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .quick-links li:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+      margin-top: 30px;
+    }
+
+    .logo{
+      margin-left: -8%;
+    }
+    
+    .wrap{
+      display: flex;
+    }
+
+
+    .column {
+      padding: 20px 0;
+      margin: 0;
+    }
+  
+    .email-input {
+      margin-top: 20px;
+    }
+    
+    .email-input input {
+      padding: 8px;
+    }
+    
+    .social-icons {
+      margin: auto;
+      margin-top: 30px;
+    }
+    
+    .social-icon {
+      margin-right: 5px;
+    }
+  }
+  

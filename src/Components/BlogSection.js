@@ -25,8 +25,7 @@ const BlogSection = () => {
     <>
     <div className="blog-heading">
         <h1>BLOG</h1>
-    </div>
-
+      </div>
     <div className="blog-section">
       <div className="main-blog">
         <img src={blogs[0].image} alt={blogs[0].title} className="blog-image" />
@@ -39,8 +38,9 @@ const BlogSection = () => {
             <div className="side-blog-image">
               <img src={blog.image} alt={blog.title} />
               <div className="arrow-popup">Click to read</div>
+              <div className="blog-title">{blog.title}</div>
             </div>
-            <div className="blog-title">{blog.title}</div>
+
           </div>
         ))}
       </div>
