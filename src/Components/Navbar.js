@@ -83,7 +83,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="navbar-middle">
-              <a href="#">
+              <a href="/">
                 <img
                   src={logo}
                   id="Lg"
@@ -159,7 +159,7 @@ const Navbar = () => {
         <div id="FullNavbar" className={isSticky ? "sticky" : ""}>
           <nav className="navbar">
             <div className="navbar-left">
-              <a href="#">
+              <a href="/">
                 <img
                   src={logo}
                   alt="Your Logo"
@@ -168,7 +168,7 @@ const Navbar = () => {
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="/">
                 <img src={location} alt="Your location" className="location" />
               </a>
               <div className="location-btn-text">FIND A STORE</div>
