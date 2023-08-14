@@ -253,11 +253,9 @@
 
   .footer {
     align-items: center;
-    margin: 5% 0;
-  }
-
-  .footer .date {
-    margin-top: 1%; /* Adjust margin for smaller screens */
+    display: flex;
+    flex-direction: column;
+    margin-top: -2%;
   }
 
   .avatar {

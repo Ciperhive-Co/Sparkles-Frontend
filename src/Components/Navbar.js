@@ -1,6 +1,8 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "./logo.png";
+import img1 from "./product-finder.jpg";
+import img2 from "./exterior-ceramic-coatings.jpg";
 import location from "./location.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +10,8 @@ import { faBars, faTimes, faChevronRight, faMapMarker } from "@fortawesome/free-
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
+import SubCat from "./SubCat";
+
 
 const Navbar = () => {
   const isSmallScreen = () => window.innerWidth < 950;
@@ -22,7 +26,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const header = document.getElementById("promotion");
+      const header = document.getElementById("carouselExampleCaptions");
       const sticky = header.offsetTop;
 
       if (window.pageYOffset > sticky) {
@@ -60,15 +64,51 @@ const Navbar = () => {
     "Lubricants & Filters",
   ];
 
+  const dropdownContents = {
+
+    "Accessories" : <SubCat
+    images={[img1, img2]}
+    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+  />,
+    "Kit" : <SubCat
+    images={[img1, img2]}
+    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+  />,
+    "Wash & Dry" : <SubCat
+    images={[img1, img2]}
+    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+  />,
+    "Soaps & Cleaners" : <SubCat
+    images={[img1, img2]}
+    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+  />,
+    "Exterior Care": <SubCat
+    images={[img1, img2]}
+    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+  />,
+    "Interior Care": <SubCat
+    images={[img1, img2]}
+    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+  />,
+    "Lubricants & Filters": <SubCat
+    images={[img1, img2]}
+    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+  />
+  };
+
   const handleMenuItemClick = (item) => {
     // Handle the click on menu items here (e.g., navigate to the respective page)
     console.log(`Clicked on ${item}`);
   };
 
+  function getDropdownContent(item) {
+    return dropdownContents[item];
+  }
+
   return (
     <>
       {smallScreen ? (
-        <div id="FullNavbar" className={isSticky ? "sticky" : ""}>
+        <div id="FullNavbar" className={isSticky ? "stickyRes" : ""}>
           <nav className="navbar">
             <div className="navbar-left">
               <div className="hamburger-icon" onClick={toggleMenu}>
@@ -83,7 +123,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="navbar-middle">
-              <a href="#">
+              <a href="/">
                 <img
                   src={logo}
                   id="Lg"
@@ -98,68 +138,63 @@ const Navbar = () => {
                   <FaShoppingCart
                     style={{ fontSize: "24px", color: "#24245a" }}
                   />
-                  <div className="cart-btn-text">Cart</div>
+                  <div className="cart-btn-text"></div>
                 </button>
               </div>
             </div>
           </nav>
           {isMenuOpen ? (
-            <Modal show={isMenuOpen} onHide={toggleMenu} dialogClassName="custom-modal">
-              <Modal.Header>
-                <div className="modal-header-content">
-                  <div className="modal-title">
-                    <span>Main Menu</span>
-                  </div>
-                  <div className="close-button" onClick={toggleMenu}>
-                    <FontAwesomeIcon
-                      icon={faTimes}
-                      style={{ fontSize: "24px", color: "#24245a" }}
-                    />
-                  </div>
-                </div>
-              </Modal.Header>
-              <Modal.Body>
-                <ul className="menu-list">
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      {item}
-                      <FontAwesomeIcon
-                        icon={faChevronRight}
-                        style={{ fontSize: "12px", color: "#24245a", cursor: "pointer"}}
-                        onClick={() => handleMenuItemClick(item)}
-                      />
-                    </li>
-                  ))}
-                </ul>
-              </Modal.Body>
-              <Modal.Footer>
-                <Button className="login-button">
-                  <FontAwesomeIcon
-                    icon={faUser}
-                    style={{ fontSize: "24px", color: "#24245a" }}
-                  />
-                  <span className="button-text">Log in</span>
-                </Button>
-                <Button className="store-button">
-                  <FontAwesomeIcon
-                    icon={faMapMarker}
-                    style={{ fontSize: "24px", color: "#24245a" }}
-                  />
-                  <span className="button-text">FIND A STORE</span>
-                </Button>
-              </Modal.Footer>
-            </Modal>
+      <Modal size="sm" animation={false} show={isMenuOpen} onHide={toggleMenu} dialogClassName={`custom-modal ${isMenuOpen ? '' : 'hidden'}`}>    <Modal.Header>
+      <div className="modal-header-content">
+        <div className="modal-title">
+          <span>Main Menu</span>
+        </div>
+        <div className="close-button" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={faTimes} style={{ fontSize: "24px", color: "#24245a" }} />
+        </div>
+      </div>
+    </Modal.Header>
+    <Modal.Body>
+      <ul className="menu-list">
+        {menuItems.map((item, index) => (
+          <li key={index}>
+            {item}
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              style={{ fontSize: "12px", color: "#24245a", cursor: "pointer" }}
+              onClick={() => handleMenuItemClick(item)}
+
+              
+            />
+          </li>
+        ))}
+      </ul>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button className="login-button">
+        <FontAwesomeIcon icon={faUser} style={{ fontSize: "24px", color: "#24245a" }} />
+        <span className="button-text">Log in</span>
+      </Button>
+      <Button className="store-button">
+        <FontAwesomeIcon icon={faMapMarker} style={{ fontSize: "24px", color: "#24245a" }} />
+        <span className="button-text">FIND A STORE</span>
+      </Button>
+    </Modal.Footer>
+  </Modal>
           ) :
           null}
-          <div className="search-bar_rs">
-            <input type="text" placeholder="Search..." />
-          </div>
+
+    {!isSticky && (
+      <div className="search-bar_rs">
+        <input type="text" placeholder="Search..." />
+      </div>
+    )}
         </div>
       ) : (
         <div id="FullNavbar" className={isSticky ? "sticky" : ""}>
           <nav className="navbar">
             <div className="navbar-left">
-              <a href="#">
+              <a href="/">
                 <img
                   src={logo}
                   alt="Your Logo"
@@ -168,7 +203,7 @@ const Navbar = () => {
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="/">
                 <img src={location} alt="Your location" className="location" />
               </a>
               <div className="location-btn-text">FIND A STORE</div>
@@ -206,7 +241,7 @@ const Navbar = () => {
               >
                 {item}
                 <div className="dropdown-menu">
-                  {/* Dropdown menu content goes here */}
+                {getDropdownContent(item)}
                 </div>
               </div>
             ))}

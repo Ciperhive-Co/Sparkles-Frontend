@@ -1,13 +1,12 @@
-.footer {
+.footerW {
     display: flex;
     justify-content: space-around;
     margin-left: 20px;
-    
-    margin-top: 50px;
-   
+    margin-top: 90px;
+    max-width: 100%;
   }
   
-  .column {
+  .columnF {
     flex: 1;
     padding: 0 20px;
     margin-left: 20px;
@@ -95,7 +94,7 @@
   }
   
   @media (max-width: 768px) {
-    .footer {
+    .footerW {
       flex-direction: column;
       align-items: center;
       text-align: center;

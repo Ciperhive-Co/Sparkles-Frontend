@@ -2,6 +2,7 @@
     max-height: 800px; /* Adjust the maximum height as desired */
     margin: 0 auto; /* Center the carousel horizontally */
     overflow: hidden; /* Hide any overflow content */
+    width: 100%;
   }
   
   .carousel-inner {

@@ -14,12 +14,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="footer">
+    <footer className="footerW">
           
-      <div className="column">
+      <div className="columnF">
         <img src="./assets/logo.png" alt="Company Logo" className="logo" />
       </div>
-      <div className="column">
+      <div className="columnF">
         <div className="heading">
         <b>BECOME AN ETHOS INSIDER</b>
         </div>
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="column">
+      <div className="columnF">
       <div className="heading">
       <b>QUICK LINKS</b>
       </div>
@@ -54,7 +54,7 @@ const Footer = () => {
           <li>Contact</li>
         </ul>
       </div>
-      <div className="column">
+      <div className="columnF">
       <div className="heading">
       <b>POLICIES</b>
       </div>
@@ -65,7 +65,7 @@ const Footer = () => {
           <li>Privacy Policy</li>
         </ul>
       </div>
-      <div className="column">
+      <div className="columnF">
       <div className="heading">
       <b>COMPANY</b>
       </div>

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import 'bootstrap/dist/js/bootstrap.bundle.min'; 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './Shop.css';
 
 export default function Shop() {
   const categories = [
     {
       name: 'BEST SELLERS',
-      products: [ 
+      products: [
         {
           title: 'Product 1',
           description: 'This is the description of the product',

@@ -3,19 +3,19 @@ import './BlogSection.css'; // Make sure to import your CSS file
 
 const blogs = [
   {
-    title: 'Blog Title 1',
+    title: 'Revolutionizing Cars: The Benefits of Graphene Coatings for Enhanced Protection and Performance',
     image: './assets/blog1.webp',
   },
   {
-    title: 'Blog Title 2',
+    title: 'Ethos Ceramic Shampoo: The Ultimate Solution for Maintaining and Protecting Your Cars Ceramic Coating',
     image: './assets/blog2.webp',
   },
   {
-    title: 'Blog Title 3',
+    title: 'Foam Gun Vs. Foam Cannon: Which Is Right For You?',
     image: './assets/blog3.webp',
   },
   {
-    title: 'Blog Title 4',
+    title: 'The Benefits of Detailing Your Car Before Shipping It',
     image: './assets/blog4.webp',
   },
 ];
