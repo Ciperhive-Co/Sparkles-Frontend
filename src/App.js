@@ -1,23 +1,18 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import clean from './cleancar.png';
-import dirty from './dirty-car.png';
 import Navbar from './Components/Navbar';
 import Slider from './Components/Slider';
 import Shop from './Components/Shop';
 import BlogSection from './Components/BlogSection';
 import ImageReel from './Components/ImageReel';
 import Footer from './Components/Footer';
-import ReactCompareImage from 'react-compare-image';
 import ClickablePictures from './Components/ClickablePictures';
 import {useState,useEffect} from "react";
 import ComparisonSlider from './Components/ComparisonSlider';
 
 // export default App;
 function App() {
-
-  const [sliderPosition, setSliderPosition] = useState(0.2);
   
   const [isLoading, setIsLoading] = useState(true);
 

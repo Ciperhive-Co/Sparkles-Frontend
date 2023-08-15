@@ -4,25 +4,35 @@
     margin-left: 20px;
     margin-top: 90px;
     max-width: 100%;
+    font-family: 'Avalon', sans-serif;
+    height: 300px;
   }
   
   .columnF {
     flex: 1;
     padding: 0 20px;
-    margin-left: 20px;
+    margin-left: 15px;
     color: #333;
+  }
+
+  .columnF p{
+    font-size: 16px;
+    margin-top: 7%;
+    margin-bottom: 2%;
   }
   
   .logo {
     margin-top: 0px;
     max-width: 130px;
     height: auto;
+    cursor: pointer;
   }
   
   .heading{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    width: 100%;
   }
-  
+
   .email-input {
     position: relative;
     margin-top: 10px;
@@ -37,12 +47,13 @@
   
   .email-input label {
     position: absolute;
-    top: 8px;
+    top: 10px;
     left: 10px;
     font-size: 12px;
     color: #aaa;
     pointer-events: none;
     transition: top 0.2s, font-size 0.2s;
+    font-family: "Bebas Neue", sans-serif;
   }
   
   .email-input.focused label {
@@ -55,7 +66,7 @@
   .social-icons {
     display: flex;
     margin-top: 20px;
-
+    cursor: pointer;
   }
   
   .facebook {
@@ -71,11 +82,9 @@
     margin-right: 10px;
   }
   
-  .youtube {
-    
+  .youtube {  
     width: 30px;
-    height: 30px;
-   
+    height: 30px; 
     margin-right: 10px;
   }
   .quick-links {
@@ -95,11 +104,11 @@
   
   @media (max-width: 768px) {
     .footerW {
-      flex-direction: column;
-      align-items: center;
+      display: block;
       text-align: center;
       margin-left: 0;
       margin-top: 30px;
+      height: fit-content;
     }
 
     .logo{
@@ -111,17 +120,30 @@
     }
 
 
-    .column {
+    .columnF {
       padding: 20px 0;
       margin: 0;
     }
+
+    .columnF p{
+      margin-top: 1%;
+      width: 85%;
+      margin-left: 7%;
+    }
   
     .email-input {
-      margin-top: 20px;
+      margin-top: 10px;
     }
     
     .email-input input {
       padding: 8px;
+      width: 425px;
+      margin-left: 2%;
+    }
+    .email-input label {
+      margin-left: 10%;
+      margin-top: -1%;
+      font-family: "Bebas Neue", sans-serif;
     }
     
     .social-icons {
@@ -131,6 +153,46 @@
     
     .social-icon {
       margin-right: 5px;
+    }
+    
+    .heading{
+      margin-top: -3%;
+      width: 500px;
+    }
+    .heading p{
+     margin-left: 10%;
+    }
+
+    .CollapseMenu{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .CollapseHeader1,
+    .CollapseHeader2,
+    .CollapseHeader3 {
+      margin: auto;
+      padding: 15px 0; 
+      border-bottom: 1px solid black; 
+      width: 90%;
+    }
+    
+    .credits {
+      text-align: center;
+      margin-top: 10%;
+      font-size: 14px;
+      color: black;
+      margin-bottom: 10%;
+      font-family: 'Avalon', sans-serif;
+    }
+
+    .credits span {
+      font-size: 18px;
+      margin-right: 5px;
+    }
+    
+    .cr{
+      margin-left: -15%;
     }
   }
   
