@@ -3,9 +3,14 @@
     justify-content: space-around;
     margin-left: 20px;
     margin-top: 90px;
+<<<<<<< HEAD
     max-width: 100%;
     font-family: 'Avalon', sans-serif;
     height: 300px;
+=======
+    max-width: 100vw;
+   
+>>>>>>> fe2cb2852a30351bb0dbff09b17e6946275d9bf3
   }
   
   .columnF {
