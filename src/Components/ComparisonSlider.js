@@ -1,45 +1,44 @@
 import React, { useEffect, useState, useRef } from 'react';
-import './ComparisonSlider.css'; 
+import './ComparisonSlider.css';
 import clean from './cleancar.png';
 import dirty from './dirty-car.png';
 
 const ComparisonSlider = () => {
-
     const [active, setActive] = useState(false);
     const sliderRef = useRef(null);
-    const animationTriggered = useRef(false); 
-
+    const animationTriggered = useRef(false);
 
     useEffect(() => {
         const scroller = document.querySelector('.scroller');
         const wrapper = document.querySelector('.wrapper');
 
-        const initialPosition = -100;
-
-        document.querySelector('.after').style.width = initialPosition + 'px';
-        scroller.style.left = initialPosition - 25 + 'px';
-
-        const handleMouseDown = () => {
+        const handlePointerDown = (e) => {
+            e.preventDefault();
             setActive(true);
             scroller.classList.add('scrolling');
         };
 
-        const handleMouseUp = () => {
+        const handlePointerUp = () => {
             setActive(false);
             scroller.classList.remove('scrolling');
         };
 
-        const handleMouseLeave = () => {
-            setActive(false);
-            scroller.classList.remove('scrolling');
-        };
-
-        const handleMouseMove = (e) => {
+        const handlePointerMove = (e) => {
             if (!active) return;
 
-            let x = e.pageX;
+            let x;
+            if (e.touches) {
+                x = e.touches[0].pageX;
+            } else {
+                x = e.pageX;
+            }
             x -= wrapper.getBoundingClientRect().left;
             scrollIt(x);
+        };
+
+        const handlePointerLeave = () => {
+            setActive(false);
+            scroller.classList.remove('scrolling');
         };
 
         const scrollIt = (x) => {
@@ -48,16 +47,16 @@ const ComparisonSlider = () => {
             scroller.style.left = transform - 25 + 'px';
         };
 
-        document.addEventListener('mousedown', handleMouseDown);
-        document.addEventListener('mouseup', handleMouseUp);
-        document.addEventListener('mouseleave', handleMouseLeave);
-        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('pointerdown', handlePointerDown);
+        document.addEventListener('pointerup', handlePointerUp);
+        document.addEventListener('pointermove', handlePointerMove);
+        document.addEventListener('pointerleave', handlePointerLeave);
 
         return () => {
-            document.removeEventListener('mousedown', handleMouseDown);
-            document.removeEventListener('mouseup', handleMouseUp);
-            document.removeEventListener('mouseleave', handleMouseLeave);
-            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('pointerdown', handlePointerDown);
+            document.removeEventListener('pointerup', handlePointerUp);
+            document.removeEventListener('pointermove', handlePointerMove);
+            document.removeEventListener('pointerleave', handlePointerLeave);
         };
     }, [active]);
 

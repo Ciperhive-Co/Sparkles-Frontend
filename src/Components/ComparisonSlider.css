@@ -104,8 +104,8 @@
   
   @media (max-width: 768px) {
     .wrapper {
-      width: 400px; /* Adjust width for smaller screens */
-      height: 400px; /* Allow height to adjust based on content */
+      width: 390px; /* Adjust width for smaller screens */
+      height: 390px; /* Allow height to adjust based on content */
     }
     
     #page{

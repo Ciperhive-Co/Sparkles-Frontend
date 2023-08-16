@@ -132,12 +132,12 @@
     }
   
     .email-input {
-      margin-top: 10px;
+      margin-top: 25px !important;
     }
     
     .email-input input {
       padding: 8px;
-      width: 425px;
+      width: 330px;
       margin-left: 2%;
     }
     .email-input label {
@@ -157,7 +157,7 @@
     
     .heading{
       margin-top: -3%;
-      width: 500px;
+      width: 100%;
     }
     .heading p{
      margin-left: 10%;
