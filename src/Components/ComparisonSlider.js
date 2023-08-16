@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import './ComparisonSlider.css';
 import clean from './cleancar.png';
 import dirty from './dirty-car.png';
@@ -7,6 +7,43 @@ const ComparisonSlider = () => {
     const [active, setActive] = useState(false);
     const sliderRef = useRef(null);
     const animationTriggered = useRef(false);
+
+    const handleIntersection = useCallback((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting && !animationTriggered.current) {
+                animateSlider();
+                animationTriggered.current = true; // Mark animation as triggered
+            }
+        });
+    }, [animationTriggered]);
+
+    const animateSlider = () => {
+        const scroller = document.querySelector('.scroller');
+        const wrapper = document.querySelector('.wrapper');
+
+        const scrollIt = (x) => {
+            let transform = Math.max(0, Math.min(x, wrapper.offsetWidth));
+            document.querySelector('.after').style.width = transform + 'px';
+            scroller.style.left = transform - 25 + 'px';
+        };
+
+        const initialX = -100; // Adjust this value based on your needs
+        const finalX = wrapper.offsetWidth - 50 + 50; // Subtract 100 for the initial left position and 50 for the scroller width
+
+        let currentTime = 0;
+        const duration = 5000; // Animation duration in milliseconds
+
+        const animationInterval = setInterval(() => {
+            if (currentTime <= duration) {
+                const progress = currentTime / duration;
+                const newX = initialX + progress * (finalX - initialX);
+                scrollIt(newX);
+                currentTime += 16; // Approximately 60 frames per second
+            } else {
+                clearInterval(animationInterval);
+            }
+        }, 16);
+    };
 
     useEffect(() => {
         const scroller = document.querySelector('.scroller');
@@ -61,7 +98,6 @@ const ComparisonSlider = () => {
     }, [active]);
 
     useEffect(() => {
-
         const observerOptions = {
             root: null,
             rootMargin: '0px',
@@ -74,56 +110,21 @@ const ComparisonSlider = () => {
         return () => {
             observer.disconnect();
         };
-    }, []);
+    }, [handleIntersection]);
 
-    const handleIntersection = (entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting && !animationTriggered.current) {
-                animateSlider();
-                animationTriggered.current = true; // Mark animation as triggered
-            }
-        });
+    const sliderContainerStyle = {
+        padding: '20vh', // Add padding of 50px
     };
 
-    const animateSlider = () => {
-
-        const scroller = document.querySelector('.scroller');
-        const wrapper = document.querySelector('.wrapper');
-
-        const scrollIt = (x) => {
-            let transform = Math.max(0, Math.min(x, wrapper.offsetWidth));
-            document.querySelector('.after').style.width = transform + 'px';
-            scroller.style.left = transform - 25 + 'px';
-        };
-
-        const initialX = -100; // Adjust this value based on your needs
-        const finalX = wrapper.offsetWidth - 50 + 50; // Subtract 100 for the initial left position and 50 for the scroller width
-
-        let currentTime = 0;
-        const duration = 5000; // Animation duration in milliseconds
-
-        const animationInterval = setInterval(() => {
-            if (currentTime <= duration) {
-                const progress = currentTime / duration;
-                const newX = initialX + progress * (finalX - initialX);
-                scrollIt(newX);
-                currentTime += 16; // Approximately 60 frames per second
-            } else {
-                clearInterval(animationInterval);
-            }
-        }, 16);
-    };
-
-  return (
-    <>
+    return (
         <div id="page">
-        <div ref={sliderRef} className="slider-container">
+            <div ref={sliderRef} className="slider-container" style={sliderContainerStyle}>
                 <div className="wrapper">
                     <div className="before">
-                        <img className="content-image" src={dirty} draggable="false" />
+                        <img className="content-image" src={dirty} draggable="false" alt="Dirty Car" />
                     </div>
                     <div className="after">
-                        <img className="content-image" src={clean} draggable="false" />
+                        <img className="content-image" src={clean} draggable="false" alt="Clean Car" />
                     </div>
                     <div className="scroller">
                         <svg className="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
@@ -134,8 +135,7 @@ const ComparisonSlider = () => {
                 </div>
             </div>
         </div>
-    </>
-  );
+    );
 };
 
 export default ComparisonSlider;
