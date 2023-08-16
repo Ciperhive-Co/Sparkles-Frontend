@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a73897d8.css",
+    "main.js": "/static/js/main.f7b5c56b.js",
+    "static/js/787.7c6f5b3c.chunk.js": "/static/js/787.7c6f5b3c.chunk.js",
+    "static/media/cleancar.png": "/static/media/cleancar.2dc4590a6095c30fe0fd.png",
+    "static/media/dirty-car.png": "/static/media/dirty-car.f848808b2b6ba63073a0.png",
+    "static/media/Pic3.jpg": "/static/media/Pic3.2b1c784e7113722743bf.jpg",
+    "static/media/Pic2.jpg": "/static/media/Pic2.1fd60bb822ff0b2327a7.jpg",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
+    "static/media/Pic4.jpg": "/static/media/Pic4.bbc2fc45c32a57c92e6f.jpg",
+    "static/media/Pic1.jpg": "/static/media/Pic1.bcbb3d625e26dcc86bb5.jpg",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
+    "static/media/logo.png": "/static/media/logo.c39a43ac095b648a9888.png",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.878f31251d960bd6266f.woff2",
+    "static/media/location.png": "/static/media/location.15c866d911b0ba89f292.png",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
+    "static/media/product-finder.jpg": "/static/media/product-finder.d24ac706a83fb4fddab9.jpg",
+    "static/media/exterior-ceramic-coatings.jpg": "/static/media/exterior-ceramic-coatings.6bd2e936c67bb6cfa1e5.jpg",
+    "static/media/bebas-neue-latin-400-normal.woff2": "/static/media/bebas-neue-latin-400-normal.4352f3c0f3586c850c24.woff2",
+    "static/media/bebas-neue-latin-400-normal.woff": "/static/media/bebas-neue-latin-400-normal.35d44c0962992ff863c1.woff",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
+    "static/media/bebas-neue-latin-ext-400-normal.woff2": "/static/media/bebas-neue-latin-ext-400-normal.99be330d826b8dba922c.woff2",
+    "static/media/bebas-neue-latin-ext-400-normal.woff": "/static/media/bebas-neue-latin-ext-400-normal.40ecee6e5fd01923295f.woff",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
+    "index.html": "/index.html",
+    "main.a73897d8.css.map": "/static/css/main.a73897d8.css.map",
+    "main.f7b5c56b.js.map": "/static/js/main.f7b5c56b.js.map",
+    "787.7c6f5b3c.chunk.js.map": "/static/js/787.7c6f5b3c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a73897d8.css",
+    "static/js/main.f7b5c56b.js"
+  ]
+}
