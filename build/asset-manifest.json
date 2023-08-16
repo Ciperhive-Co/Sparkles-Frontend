@@ -1,12 +1,7 @@
 {
   "files": {
-<<<<<<< HEAD
-    "main.css": "/static/css/main.a73897d8.css",
-    "main.js": "/static/js/main.f7b5c56b.js",
-=======
-    "main.css": "/static/css/main.f2828261.css",
-    "main.js": "/static/js/main.e908a3df.js",
->>>>>>> fe2cb2852a30351bb0dbff09b17e6946275d9bf3
+    "main.css": "/static/css/main.f8592583.css",
+    "main.js": "/static/js/main.b9448b26.js",
     "static/js/787.7c6f5b3c.chunk.js": "/static/js/787.7c6f5b3c.chunk.js",
     "static/media/cleancar.png": "/static/media/cleancar.2dc4590a6095c30fe0fd.png",
     "static/media/dirty-car.png": "/static/media/dirty-car.f848808b2b6ba63073a0.png",
@@ -22,11 +17,8 @@
     "static/media/location.png": "/static/media/location.15c866d911b0ba89f292.png",
     "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.50701fbb8177c2dde530.ttf",
     "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.b041b1fa4fe241b23445.woff2",
-<<<<<<< HEAD
     "static/media/product-finder.jpg": "/static/media/product-finder.d24ac706a83fb4fddab9.jpg",
     "static/media/exterior-ceramic-coatings.jpg": "/static/media/exterior-ceramic-coatings.6bd2e936c67bb6cfa1e5.jpg",
-=======
->>>>>>> fe2cb2852a30351bb0dbff09b17e6946275d9bf3
     "static/media/bebas-neue-latin-400-normal.woff2": "/static/media/bebas-neue-latin-400-normal.4352f3c0f3586c850c24.woff2",
     "static/media/bebas-neue-latin-400-normal.woff": "/static/media/bebas-neue-latin-400-normal.35d44c0962992ff863c1.woff",
     "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
@@ -34,22 +26,12 @@
     "static/media/bebas-neue-latin-ext-400-normal.woff": "/static/media/bebas-neue-latin-ext-400-normal.40ecee6e5fd01923295f.woff",
     "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/index.html",
-<<<<<<< HEAD
-    "main.a73897d8.css.map": "/static/css/main.a73897d8.css.map",
-    "main.f7b5c56b.js.map": "/static/js/main.f7b5c56b.js.map",
+    "main.f8592583.css.map": "/static/css/main.f8592583.css.map",
+    "main.b9448b26.js.map": "/static/js/main.b9448b26.js.map",
     "787.7c6f5b3c.chunk.js.map": "/static/js/787.7c6f5b3c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a73897d8.css",
-    "static/js/main.f7b5c56b.js"
-=======
-    "main.f2828261.css.map": "/static/css/main.f2828261.css.map",
-    "main.e908a3df.js.map": "/static/js/main.e908a3df.js.map",
-    "787.7c6f5b3c.chunk.js.map": "/static/js/787.7c6f5b3c.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.f2828261.css",
-    "static/js/main.e908a3df.js"
->>>>>>> fe2cb2852a30351bb0dbff09b17e6946275d9bf3
+    "static/css/main.f8592583.css",
+    "static/js/main.b9448b26.js"
   ]
 }
