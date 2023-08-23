@@ -1,0 +1,93 @@
+.prod-Card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45vh;
+    width: 20vw;
+    margin: 20px;
+    padding-bottom: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+.prodIMG{
+   width: 100%;
+   height: 100%; 
+}
+
+.imgPC{
+    height: 60%;
+    width: 100%;
+    z-index: -1;
+}
+
+.banner{
+    z-index: 1;
+    width: 30%;
+    height: 25px;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    padding: 4px 8px;
+} 
+
+.soldout{
+    background-color: grey;
+    color: white;
+    
+}
+div.soldout:before { 
+    content: "Sold Out" ; 
+}
+
+.bestselling{
+    background-color: red;
+    color: white;
+}
+
+div.bestselling:before { 
+    content: "Best Selling" ; 
+}
+
+.none{
+    display: none;
+}
+
+.detailsPC{
+    padding: 2px 40px;
+}
+
+.disc{
+    text-align: left;
+}
+
+
+.pricePC{
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.text-dull{
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: gray;
+}
+
+.beforePC{
+    text-decoration: line-through;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+}
+
+.image-containerPC{
+    display: flex;
+}
+
+.imgTag{
+    width: 20px;
+    height: 20px;
+}

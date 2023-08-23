@@ -2,14 +2,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import Navbar from './Components/Navbar';
-import Slider from './Components/Slider';
-import Shop from './Components/Shop';
-import BlogSection from './Components/BlogSection';
-import ImageReel from './Components/ImageReel';
-import Footer from './Components/Footer';
-import ClickablePictures from './Components/ClickablePictures';
 import {useState,useEffect} from "react";
-import ComparisonSlider from './Components/ComparisonSlider';
+import Home from './Components/Home';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CategoryPage from './Components/CategoryPage';
+
 
 // export default App;
 function App() {
@@ -33,27 +30,32 @@ function App() {
       </div>
     );
   }
+
+  const categoryData = {
+    Kit: ["New Releases", "Best Selling"],
+    Accessories: ["New Releases", "Best Selling"],
+    "Wash & Dry":  ["New Releases", "Best Selling"],
+    "Soaps & Cleaners": ["New Releases", "Best Selling"],
+    "Exterior Care":  ["New Releases", "Best Selling"],
+    "Interior Care":  ["New Releases", "Best Selling"],
+    "Lubricants & Filters":  ["New Releases", "Best Selling"],
+  };
   
   return (
+    <Router>
     <div className="App">
       <div id="promotion" className="promotional-bar">
         <div className="promotional-content">
           <p>Get 10% off on all products. Use code: PROMO10</p>
         </div>
       </div>
-      <Navbar />
-      <Slider />
-      <Shop />
-      <ClickablePictures />
-        <div className="Wrapper" style={{ minHeight: '200px' }}>
-        <ComparisonSlider/>
-        </div>
-      <BlogSection />
-      <div className="instaHeading">@Sparkles.co</div>
-      <ImageReel />
-      <Footer />
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/category/:categoryName" element={<CategoryPage categoryData={categoryData} />} />
+      </Routes>
     </div>
+    </Router>
   );
 }
-
 export default App;

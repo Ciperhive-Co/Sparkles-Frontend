@@ -1,14 +1,14 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "./logo.png";
-import img1 from "./product-finder.jpg";
-import img2 from "./exterior-ceramic-coatings.jpg";
+import img1 from "./Pic1.jpg";
 import location from "./location.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes, faChevronRight, faMapMarker } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 import SubCat from "./SubCat";
 
@@ -19,6 +19,7 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [smallScreen, setSmallScreen] = useState(isSmallScreen());
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -26,7 +27,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const header = document.getElementById("carouselExampleCaptions");
+      const header = document.getElementById("dummy");
       const sticky = header.offsetTop;
 
       if (window.pageYOffset > sticky) {
@@ -67,38 +68,38 @@ const Navbar = () => {
   const dropdownContents = {
 
     "Accessories" : <SubCat
-    images={[img1, img2]}
+    images={[img1]}
     categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
   />,
     "Kit" : <SubCat
-    images={[img1, img2]}
+    images={[img1]}
     categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
   />,
     "Wash & Dry" : <SubCat
-    images={[img1, img2]}
+    images={[img1]}
     categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
   />,
     "Soaps & Cleaners" : <SubCat
-    images={[img1, img2]}
+    images={[img1]}
     categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
   />,
     "Exterior Care": <SubCat
-    images={[img1, img2]}
+    images={[img1]}
     categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
   />,
     "Interior Care": <SubCat
-    images={[img1, img2]}
+    images={[img1]}
     categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
   />,
     "Lubricants & Filters": <SubCat
-    images={[img1, img2]}
+    images={[img1]}
     categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
   />
   };
 
   const handleMenuItemClick = (item) => {
-    // Handle the click on menu items here (e.g., navigate to the respective page)
     console.log(`Clicked on ${item}`);
+    navigate(`/category/${item}`);
   };
 
   function getDropdownContent(item) {
@@ -189,6 +190,7 @@ const Navbar = () => {
         <input type="text" placeholder="Search..." />
       </div>
     )}
+    <div id ="dummy"></div>
         </div>
       ) : (
         <div id="FullNavbar" className={isSticky ? "sticky" : ""}>
@@ -246,6 +248,7 @@ const Navbar = () => {
               </div>
             ))}
           </div>
+          <div id ="dummy"></div>
         </div>
       )}
     </>

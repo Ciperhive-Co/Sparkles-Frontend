@@ -1,0 +1,123 @@
+.main-category{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: 2px solid lightgrey;
+}
+
+.RV-heading{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10%;
+  padding-bottom: 2%;
+}
+
+.category-display{
+  margin-left: 40px;
+  margin-top: 2%;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.descriptionCP{
+  width: 50%;
+  margin: auto;
+  font-size: 15px;
+  font-family: 'Arvo', sans-serif; /* Apply Arvo font and provide a fallback */
+  font-weight: bolder;
+}
+
+.descriptionCP-wrapper{
+  margin-top: 15%;
+  display: flex;
+}
+
+.category-page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 50px;
+}
+
+.filter-container {
+  width: 35%; /* Adjust the width as needed */
+}
+
+.d-flexCC {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 0;
+}
+
+.d-flexCC {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Adjust the gap as needed */
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+
+.product-cardCC {
+  width: calc(20% - 20px);
+  max-width: 240px;
+  height: auto;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: translateY(15px);
+  transition: transform 0.5s, box-shadow 0.5s;
+  animation: transform 0.2s ease-in-out;
+  font-family: 'Bebas Neue', sans-serif;
+  cursor: pointer;
+  margin: 10px;
+}
+
+
+.Bar-container {
+  margin-top: 13.5%;
+  width: 65%; /* Adjust the width as needed */
+  height: 20%;
+}
+
+.d-flexRW {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 1px;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 0;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.product-cardRW {
+  width: calc(20% - 20px);
+  max-width: 240px;
+  height: auto;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Bebas Neue', sans-serif;
+  cursor: pointer;
+  margin: 10px;
+}

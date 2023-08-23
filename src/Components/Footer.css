@@ -137,7 +137,7 @@
     
     .email-input input {
       padding: 8px;
-      width: 330px;
+      width: 80%;
       margin-left: 2%;
     }
     .email-input label {

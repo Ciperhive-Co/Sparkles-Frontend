@@ -9,7 +9,7 @@ const SubCat = ({ images, categories }) => {
           <img
             key={`image-${index}`}
             src={image}
-            alt={`Image ${index}`}
+            alt={`${index}`}
             className="clickable-image"
           />
         ))}
