@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes
 import './Filter.css'; 
 
 const Filter = ({ subcategoryContent, subheadingContent }) => {
@@ -7,12 +6,9 @@ const Filter = ({ subcategoryContent, subheadingContent }) => {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
   const [selectedSubheading, setSelectedSubheading] = useState(null);
+
   const handleFilterToggle = () => {
     setIsFilterOpen(!isFilterOpen);
-  };
-  const handleSubcategoryClick = (index) => {
-    setSelectedSubcategory(selectedSubcategory === index ? null : index);
-    setSelectedSubheading(null); // Unselect the subheading when a subcategory is clicked
   };
 
   const handleSubheadingClick = (index) => {
@@ -24,20 +20,22 @@ const Filter = ({ subcategoryContent, subheadingContent }) => {
     setSelectedSubcategory(null);
     setSelectedSubheading(null);
   };
-  const handleResize = () => {
-    setIsMobileView(window.innerWidth <= 768);
-    if (!isMobileView) {
-      setIsFilterOpen(false);
-    }
-  };
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768);
+      if (!isMobileView) {
+        setIsFilterOpen(false);
+      }
+    };
+
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, [isMobileView]);
+
     return (
       <div className={`filter-container ${isFilterOpen ? 'open' : ''}`}>
       {isMobileView && (

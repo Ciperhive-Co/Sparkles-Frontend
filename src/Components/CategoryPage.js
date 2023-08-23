@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import Filter from "./Filter.js";
 import './CategoryPage.css';
 import Navbar from "./Navbar.js";
-import { useState } from "react";
 import img1 from './claybarkit.webp';
 import img2 from './claybarkit.webp';
 import img3 from './claybarkit.webp';
@@ -14,7 +13,6 @@ import ProductCard from './productCard';
 const CategoryPage = ({ categoryData, subcategoryContent }) => {
   const { categoryName } = useParams();
   const subheadings = categoryData[categoryName] || [];
-  const [fadeIn, setFadeIn] = useState(false);
 
   const products = [
     {

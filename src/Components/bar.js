@@ -33,9 +33,9 @@ function bar(props) {
         <div className="dropdown">
           <button onClick={myFunction} className="dropbtn">Dropdown</button>
           <div id="myDropdown" className="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="/#">Link 1</a>
+            <a href="/#">Link 2</a>
+            <a href="/#">Link 3</a>
           </div>
         </div>
       </div>
