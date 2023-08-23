@@ -23,7 +23,7 @@ function productCard(props) {
                 <div className='rating'>
                     <div className="image-containerPC">
                         {images.map((image, index) => (
-                            <img className='imgTag' key={index} src={image} alt={`Image ${index}`} />
+                            <img className='imgTag' key={index} src={image} alt={` ${index}`} />
                         ))}
                     </div>
                     <span className='text-dull'>{props.NoOfReviews}</span>

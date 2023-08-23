@@ -58,14 +58,15 @@
 .d-flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start; /* Change to flex-start */
   margin: 0 auto;
   max-width: 1200px;
   margin-top: 0;
+  margin-left: 10%;
 }
 
 .product-card {
-  width: calc(20% - 20px);
+  width: calc(25% - 20px); /* Change width to 25% */
   max-width: 240px;
   height: auto;
   border-radius: 5px;
@@ -104,33 +105,28 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* Media queries for responsiveness */
-@media screen and (max-width: 1200px) {
-  .product-card {
-    width: calc(25% - 20px);
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .product-card {
-    width: calc(33.33% - 20px);
-  }
-}
-
 @media screen and (max-width: 768px) {
-  .category-button {
-    font-size: 18px;
-    letter-spacing: 1px;
-  }
-
   .d-flex {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
+    justify-content: flex-start; /* Keep the cards in a single row */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    margin-left: -20%; /* Reset the left margin */
+    flex-wrap: nowrap;
+    overflow-y: hidden;
   }
 
   .product-card {
-    width: 45%;
-    margin: 5px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .card-body{
+    width: 140px !important;
+    height: 300px;
+  }
+
+  .category-button {
+    font-size: 20px;
+    letter-spacing: 1px;  
   }
 }
+
