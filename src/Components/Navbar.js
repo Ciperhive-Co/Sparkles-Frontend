@@ -11,6 +11,7 @@ import { useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 import SubCat from "./SubCat";
+import SearchBar from "./SearchBar.js";
 
 
 const Navbar = () => {
@@ -56,44 +57,34 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    "Accessories",
-    "Kit",
-    "Wash & Dry",
-    "Soaps & Cleaners",
     "Exterior Care",
     "Interior Care",
-    "Lubricants & Filters",
+    "Accessories",
+    "Lubricants",
+    "Filters"
   ];
 
   const dropdownContents = {
 
+    "Exterior Care" : <SubCat
+    images={[img1]}
+    categories={['New Releases', 'Bundles', 'Shampoes', 'Accessories' ]}
+  />,
+    "Interior Care" : <SubCat
+    images={[img1]}
+    categories={['New Releases', 'Interior Cleaner', 'Microfiber','Accessories']}
+  />,
     "Accessories" : <SubCat
     images={[img1]}
-    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+    categories={['Bundles','Towels','Clothes','PAD','Mits & Sponges']}
   />,
-    "Kit" : <SubCat
+    "Lubricants" : <SubCat
     images={[img1]}
-    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+    categories={['Bike Engine','Car Engine','Gear Oil','Break Oil','Radiator Coolent','Battery Water']}
   />,
-    "Wash & Dry" : <SubCat
+    "Filters": <SubCat
     images={[img1]}
-    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
-  />,
-    "Soaps & Cleaners" : <SubCat
-    images={[img1]}
-    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
-  />,
-    "Exterior Care": <SubCat
-    images={[img1]}
-    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
-  />,
-    "Interior Care": <SubCat
-    images={[img1]}
-    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
-  />,
-    "Lubricants & Filters": <SubCat
-    images={[img1]}
-    categories={['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5' ]}
+    categories={['Air Filter','Oil Filter','AC Filter']}
   />
   };
 
@@ -187,7 +178,7 @@ const Navbar = () => {
 
     {!isSticky && (
       <div className="search-bar_rs">
-        <input type="text" placeholder="Search..." />
+        <SearchBar />
       </div>
     )}
     <div id ="dummy"></div>
@@ -211,7 +202,7 @@ const Navbar = () => {
               <div className="location-btn-text">FIND A STORE</div>
             </div>
             <div className="navbar-middle">
-              <input type="text" placeholder="Search..." />
+              <SearchBar />
             </div>
             <div className="navbar-right">
               <div className="child1">

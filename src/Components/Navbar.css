@@ -95,6 +95,7 @@ body {
 
 .navbar-middle {
   flex: 3;
+  width: 25%;
   display: flex;
   justify-content: center;
   margin-top: -2.5%;
@@ -297,6 +298,7 @@ body {
   width: 65px;
   height: auto;
   margin-top: -45%;
+  margin-left: -10%;
 }
 
 #crt{
@@ -318,6 +320,7 @@ body {
 
 .search-bar_rs {
   margin-top: -4%;
+  padding-left: 10%;
 }
 
 .login-button,

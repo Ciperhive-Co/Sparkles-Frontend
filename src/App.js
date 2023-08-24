@@ -6,7 +6,6 @@ import Home from './Components/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CategoryPage from './Components/CategoryPage';
 
-
 // export default App;
 function App() {
   
@@ -31,13 +30,11 @@ function App() {
   }
 
   const categoryData = {
-    Kit: ["New Releases", "Best Selling"],
-    Accessories: ["New Releases", "Best Selling"],
-    "Wash & Dry":  ["New Releases", "Best Selling"],
-    "Soaps & Cleaners": ["New Releases", "Best Selling"],
-    "Exterior Care":  ["New Releases", "Best Selling"],
-    "Interior Care":  ["New Releases", "Best Selling"],
-    "Lubricants & Filters":  ["New Releases", "Best Selling"],
+    "Exterior Care": ['New Releases', 'Bundles', 'Shampoes', 'Accessories'],
+    "Interior Care": ['New Releases', 'Interior Cleaner', 'Microfiber','Accessories'],
+    "Accessories":  ['Bundles','Towels','Clothes','PAD','Mits & Sponges'],
+    "Lubricants": ['Bike Engine','Car Engine','Gear Oil','Break Oil','Radiator Coolent','Battery Water'],
+    "Filters":  ['Air Filter','Oil Filter','AC Filter']
   };
   
   return (
@@ -48,7 +45,7 @@ function App() {
           <p>Get 10% off on all products. Use code: PROMO10</p>
         </div>
       </div>
-      
+     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category/:categoryName" element={<CategoryPage categoryData={categoryData} />} />
