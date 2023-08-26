@@ -8,6 +8,7 @@ import img2 from './claybarkit.webp';
 import img3 from './claybarkit.webp';
 import Bar from './bar';
 import ProductCard from './productCard';
+import Reviews from './Reviews.js'
 
 
 const CategoryPage = ({ categoryData, subcategoryContent }) => {
@@ -101,9 +102,13 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
               </div>
             </div>
           </div>
+          
         ))}
       </div>
         </div>
+      </div>
+      <div>
+        <Reviews />
       </div>
     </>
   );

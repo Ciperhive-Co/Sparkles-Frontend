@@ -10,7 +10,6 @@ const ComparisonSlider = () => {
 
   useEffect(() => {
     const handlePointerDown = (e) => {
-      e.preventDefault();
       setActive(true);
       scroller.classList.add('scrolling');
     };
