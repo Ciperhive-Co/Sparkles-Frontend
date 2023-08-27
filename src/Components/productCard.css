@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 65vh;
-    width: 20vw;
+    height: 100%;
+    width: 100%;
     margin: 20px;
     padding-bottom: 8px;
     font-family: 'Bebas Neue', sans-serif;

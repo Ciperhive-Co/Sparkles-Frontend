@@ -51,7 +51,6 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
         </h1>
       </div>
 
-      
       <div className="category-page-container">
       <div className="filter-container">
         <Filter subcategoryContent={categoryName} subheadingContent={subheadings} />

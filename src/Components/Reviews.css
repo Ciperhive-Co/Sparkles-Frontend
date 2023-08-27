@@ -1,6 +1,5 @@
 .review-slider {
   margin-top: 10%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,10 +10,10 @@
 .slider-content {
   display: flex;
   justify-content: flex-start;
-  width: 400%; /* Adjust based on the number of cards shown at a time */
-  max-width: 1000px;
+  width: 85%; /* Adjust based on the number of cards shown at a time */
   margin-bottom: 20px;
   transition: transform 0.5s ease-in-out;
+  margin-left: 10%;
 }
 .product-title{
   font-size: 16px;
