@@ -36,7 +36,7 @@ const Footer = () => {
         <footer className="footerW">
           
         <div className="columnF">
-          <img src="./assets/logo.png" alt="Company Logo" className="logo" />
+          <img src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="Company Logo" className="logo" />
         </div>
         <div className="columnF">
           <div className="heading">
@@ -55,11 +55,11 @@ const Footer = () => {
           </div>
           <div className='wrap'>
             <div className="social-icons">
-            <img src="./assets/facebook.png" className="facebook" alt="facebook"/>
+            <img src={process.env.PUBLIC_URL + '/assets/facebook.png'} className="facebook" alt="facebook"/>
             
-            <img src="./assets/instagram.png" className="instagram"  alt="instagram"/>
+            <img src={process.env.PUBLIC_URL + '/assets/instagram.png'} className="instagram"  alt="instagram"/>
             
-            <img src="./assets/youtube.png" className="youtube"  alt="youtube"/>
+            <img src={process.env.PUBLIC_URL + '/assets/youtube.png'} className="youtube"  alt="youtube"/>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ const Footer = () => {
         <footer className="footerW">
           
         <div className="columnF">
-          <img src="./assets/logo.png" alt="Company Logo" className="logo" />
+          <img src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="Company Logo" className="logo" />
         </div>
         <div className="columnF">
           <div className="heading">
@@ -115,11 +115,11 @@ const Footer = () => {
           </div>
           <div className='wrap'>
             <div className="social-icons">
-            <img src="./assets/facebook.png" className="facebook" alt="facebook"/>
+            <img src={process.env.PUBLIC_URL + '/assets/facebook.png'} className="facebook" alt="facebook"/>
             
-            <img src="./assets/instagram.png" className="instagram"  alt="instagram"/>
+            <img src={process.env.PUBLIC_URL + '/assets/instagram.png'} className="instagram"  alt="instagram"/>
             
-            <img src="./assets/youtube.png" className="youtube"  alt="youtube"/>
+            <img src={process.env.PUBLIC_URL + '/assets/youtube.png'} className="youtube"  alt="youtube"/>
             </div>
           </div>
         </div>

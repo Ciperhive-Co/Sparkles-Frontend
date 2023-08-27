@@ -23,7 +23,7 @@ function App() {
   if (isLoading) {
     return (
       <div className="loading-container">
-        <img src="./assets/logo.png" alt="Logo" className="logo" />
+        <img src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="Logo" className="logo" />
         <div className="spinner"></div>
       </div>
     );

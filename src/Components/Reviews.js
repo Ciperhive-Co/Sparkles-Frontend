@@ -49,15 +49,18 @@ const reviewsData = [
 
 const Reviews = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  const [fadeAnimation, setFadeAnimation] = useState(false);
 
   const nextReview = () => {
     setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviewsData.length);
+    setFadeAnimation(true); 
   };
 
   const prevReview = () => {
     setCurrentReviewIndex((prevIndex) =>
       prevIndex === 0 ? reviewsData.length - 1 : prevIndex - 1
     );
+    setFadeAnimation(true); 
   };
     return (
       <div className="review-slider">
@@ -75,8 +78,8 @@ const Reviews = () => {
         >
           {reviewsData.slice(currentReviewIndex, currentReviewIndex + 3).map((review, index) => (
             <div
-              key={review.id}
-              className={`review-card ${index === 0 ? "first-card" : ""}`}
+            key={review.id}
+            className={`review-card ${fadeAnimation ? "fadein" : ""}`}
             >
               <div className="review-header">
                 <div className="rating">{Array(review.rating).fill('★')}</div>

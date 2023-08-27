@@ -5,15 +5,17 @@
   align-items: center;
   --current-index: 0;
   margin-left: 5%;
+  margin-bottom: 10%;
 }
 
 .slider-content {
   display: flex;
   justify-content: flex-start;
-  width: 85%; /* Adjust based on the number of cards shown at a time */
+  width: 95%; 
   margin-bottom: 20px;
-  transition: transform 0.5s ease-in-out;
-  margin-left: 10%;
+  animation: fadeInAnimation 0.5s ease forwards;
+  margin-right: 5%;
+  gap: 60px;
 }
 .product-title{
   font-size: 16px;
@@ -33,9 +35,20 @@
   transition: transform 0.5s, box-shadow 0.5s;
   animation: transform 0.2s ease-in-out;
 }
-.review-card.fade-in {
-  opacity: 0;
-  animation: fadeInDelay 0.5s ease forwards;
+.review-card.fadein {
+  opacity: 1;
+  animation: fadeInAnimation 1s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .review-header {
@@ -77,16 +90,17 @@
   justify-content: left;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 30px;
- margin-right: 550px;
 }
 .slider-controls {
   display: flex;
-  justify-content:flex-end;
+  justify-content:space-between;
   align-items:center;
-  width: 100%;
-  max-width: 1000px;
+  width: 95%;
   margin-bottom: 10px;
   cursor: pointer;
+  border-bottom: 2px solid lightgrey;
+  margin-right: 6%;
+  padding-bottom: 2%;
 }
 
 .navigation {
@@ -96,7 +110,7 @@
 
 .total-reviews {
   font-size: 14px;
-  margin-right: 5px;
+  margin-left: 64%;
 }
 @media screen and (max-width: 768px) {
   .slider-content {

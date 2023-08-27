@@ -9,6 +9,7 @@ import img3 from './claybarkit.webp';
 import Bar from './bar';
 import ProductCard from './productCard';
 import Reviews from './Reviews.js'
+import Footer from "./Footer.js";
 
 
 const CategoryPage = ({ categoryData, subcategoryContent }) => {
@@ -62,11 +63,11 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
         <div className="d-flexCC">
         <ProductCard discription='Product 1' price='10' stars='3' NoOfReviews='3' img = {img1} status='soldout'/>
         <ProductCard discription='Product 2' price='10' stars='5' NoOfReviews='7' img = {img1} status='bestselling'/>
-        <ProductCard discription='Product 3' price='10' stars='1' NoOfReviews='27' img = {img1} status='soldout'/>
+        <ProductCard discription='Product 3' price='10' stars='1' NoOfReviews='27' img = {img1} status='none'/>
         <ProductCard discription='Product 4' price='10' stars='4' NoOfReviews='47' img = {img1} status='none'/>
         <ProductCard discription='Product 5' price='10' stars='5' NoOfReviews='17' img = {img1} status='none'/>
         <ProductCard discription='Product 6' price='10' stars='2' NoOfReviews='27' img = {img1} status='none'/>
-        <ProductCard discription='Product 7' price='10' stars='1' NoOfReviews='47' img = {img1} status='bestselling'/>
+        <ProductCard discription='Product 7' price='10' stars='1' NoOfReviews='47' img = {img1} status='none'/>
         <ProductCard discription='Product 8' price='10' stars='2' NoOfReviews='157' img = {img1} status='bestselling'/>
         <ProductCard discription='Product 9' price='10' stars='3' NoOfReviews='234' img = {img1} status='soldout'/>
         </div>
@@ -109,6 +110,7 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
       <div>
         <Reviews />
       </div>
+      <Footer />
     </>
   );
 };

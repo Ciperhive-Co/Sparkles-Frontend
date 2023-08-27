@@ -1,18 +1,19 @@
 import React from 'react'
 import './productCard.css'
-import ProdImg from '../logo.svg'
 
 function productCard(props) {
     // const images = Array(props.stars).fill('../../public/logo512.png');
-    const images = Array(parseInt(props.stars)).fill(ProdImg);
+    const ratings = Array(parseInt(props.stars)).fill('★');
     // const status = props.status;
     return (
         <div className='prod-Card'>
             {/* <div className='img-conntent'> */}
+            <div className='img-container'>
+                <div className={`banner ${props.status}`}></div>
                 <div className="imgPC">
-                <div className={`banner ${props.status}` }></div>
-                     <img className='prodIMG' src={props.img} alt='productImage' />
+                    <img className='prodIMG' src={props.img} alt='productImage' />
                 </div>
+            </div>
             {/* </div> */}
             <div className="detailsPC">
                 <h3 className='disc'>{props.discription}</h3>
@@ -22,8 +23,8 @@ function productCard(props) {
                 </div>
                 <div className='rating'>
                     <div className="image-containerPC">
-                        {images.map((image, index) => (
-                            <img className='imgTag' key={index} src={image} alt={` ${index}`} />
+                        {ratings.map((index) => (
+                            Array(ratings).fill('★')
                         ))}
                     </div>
                     <span className='text-dull'>{props.NoOfReviews}</span>
