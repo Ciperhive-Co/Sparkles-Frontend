@@ -40,6 +40,18 @@
   animation: fadeInAnimation 1s ease forwards;
 }
 
+.fadeout {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fadein {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
 @keyframes fadeInAnimation {
   from {
     opacity: 0;
@@ -106,11 +118,12 @@
 .navigation {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .total-reviews {
-  font-size: 14px;
-  margin-left: 64%;
+  font-size: 12px;
+  margin-left: 63%;
 }
 @media screen and (max-width: 768px) {
   .slider-content {
