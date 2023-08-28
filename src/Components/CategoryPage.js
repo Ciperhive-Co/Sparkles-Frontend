@@ -10,11 +10,33 @@ import Bar from './bar';
 import ProductCard from './productCard';
 import Reviews from './Reviews.js'
 import Footer from "./Footer.js";
+import { useState, useEffect } from "react";
 
 
 const CategoryPage = ({ categoryData, subcategoryContent }) => {
   const { categoryName } = useParams();
   const subheadings = categoryData[categoryName] || [];
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+
+    //MAKE IT ASYNC AND LOAD YOUR DATA HERE//
+
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <img src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="Logo" className="logo" />
+        <div className="spinner"></div>
+      </div>
+    );
+  }
+
 
   const products = [
     {
