@@ -1,11 +1,14 @@
 .footerW {
     display: flex;
     justify-content: space-around;
-    margin-left: 20px;
     margin-top: 90px;
     max-width: 100%;
     font-family: 'Avalon', sans-serif;
     height: 300px;
+    border-top: 1px solid lightgrey;
+    padding-top: 5%;
+    margin-top: -5%;
+    margin-bottom: 10%;
   }
   
   .columnF {

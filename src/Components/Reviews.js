@@ -7,43 +7,47 @@ import img from './productA.webp';
 const reviewsData = [
   {
     id: 1,
-    author: 'John Doe',
     rating: 5,
     date: '26/08/2023',
     title: 'Works Great',
-    product: 'Product A',
+    product: 'Product A - ',
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'This is the description',
     image: img,
+    author: 'P. Name',
   },
   {
     id: 2,
-    author: 'John Doe',
     rating: 3,
     date: '26/08/2023',
     title: 'Decent',
-    product: 'Product B',
+    product: 'Product B - ',
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'This is the description',
     image: img,
+    author: 'P. Name',
   },
   {
     id: 3,
-    author: 'John Doe',
     rating: 2,
     date: '26/08/2023',
     title: 'Bad',
-    product: 'Product C',
+    product: 'Product C - ',
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'This is the description',
     image: img,
+    author: 'P. Name',
   },
   {
     id: 4,
-    author: 'John Doe',
     rating: 4,
     date: '26/08/2023',
     title: 'Good',
-    product: 'Product D',
+    product: 'Product D - ',
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'This is the description',
     image: img,
+    author: 'P. Name',
   },
 ];
 
@@ -89,19 +93,20 @@ const Reviews = () => {
             className={`review-card ${fadeAnimation ? "fadeout" : "fadein"}`}
             >
               <div className="review-header">
-                <div className="rating">{Array(review.rating).fill('★')}</div>
-                <div className="date">{review.date}</div>
-              </div>
-              <div>
-                <h3 className="product-title">{review.title}</h3>
-              </div>
-              <div className="product-info">
-                <img src={review.image} className="product-image" alt={review.product} />
-                <div className="product-details">
-                  <p className="review-text">{review.review}</p>
-                </div>
+              <div className="rating">{Array(review.rating).fill('★')}</div>
+              <div className="date">{review.date}</div>
+            </div>
+            <div className="product-info">
+              <img src={review.image} className="product-image" alt={review.product} />
+              <div className="product-details">
+              <p className="review-text">{review.review}</p>
+            <p className="reviewer-name">{review.author}</p>
               </div>
             </div>
+            <h3 className="product-title">{review.product}</h3>
+           <p className="product-description">{review.description}</p>
+          </div>
+          
           ))}
         </div>
       </div>
