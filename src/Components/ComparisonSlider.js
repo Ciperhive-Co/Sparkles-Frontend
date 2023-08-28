@@ -9,36 +9,27 @@ const ComparisonSlider = () => {
   const animationTriggered = useRef(false);
 
   useEffect(() => {
-    const handlePointerDown = (e) => {
+    const handleStart = (x) => {
       setActive(true);
       scroller.classList.add('scrolling');
+      handleMove(x);
     };
 
-    const handlePointerUp = () => {
+    const handleEnd = () => {
       setActive(false);
       scroller.classList.remove('scrolling');
     };
 
-    const handlePointerMove = (e) => {
+    const handleMove = (x) => {
       if (!active) return;
 
-      let x;
-      if (e.touches) {
-        x = e.touches[0].pageX;
-      } else {
-        x = e.pageX;
-      }
-      x -= wrapper.getBoundingClientRect().left;
-      scrollIt(x);
-    };
-
-    const handlePointerLeave = () => {
-      setActive(false);
-      scroller.classList.remove('scrolling');
+      const rect = wrapper.getBoundingClientRect();
+      const positionX = x - rect.left;
+      scrollIt(positionX);
     };
 
     const scrollIt = (x) => {
-      let transform = Math.max(0, Math.min(x, wrapper.offsetWidth));
+      const transform = Math.max(0, Math.min(x, wrapper.offsetWidth));
       document.querySelector('.after').style.width = transform + 'px';
       scroller.style.left = transform - 25 + 'px';
     };
@@ -46,16 +37,42 @@ const ComparisonSlider = () => {
     const scroller = document.querySelector('.scroller');
     const wrapper = document.querySelector('.wrapper');
 
-    document.addEventListener('pointerdown', handlePointerDown);
-    document.addEventListener('pointerup', handlePointerUp);
-    document.addEventListener('pointermove', handlePointerMove);
-    document.addEventListener('pointerleave', handlePointerLeave);
+    const handleTouchStart = (e) => {
+      handleStart(e.touches[0].pageX);
+    };
+
+    const handleTouchMove = (e) => {
+      handleMove(e.touches[0].pageX);
+    };
+
+    const handleMouseDown = (e) => {
+      handleStart(e.pageX);
+    };
+
+    const handleMouseMove = (e) => {
+      handleMove(e.pageX);
+    };
+
+    const handleEndEvent = () => {
+      handleEnd();
+    };
+
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchMove);
+    document.addEventListener('touchend', handleEndEvent);
+
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleEndEvent);
 
     return () => {
-      document.removeEventListener('pointerdown', handlePointerDown);
-      document.removeEventListener('pointerup', handlePointerUp);
-      document.removeEventListener('pointermove', handlePointerMove);
-      document.removeEventListener('pointerleave', handlePointerLeave);
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleEndEvent);
+
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleEndEvent);
     };
   }, [active]);
 
