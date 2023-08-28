@@ -80,10 +80,17 @@ body {
 }
 
 .logo {
-  width: 150px;
+  width: 200px;
   height: auto;
   margin-left: 50px;
   margin-top: -10%;
+}
+
+.logoS {
+  width: 150px;
+  height: auto;
+  margin-left: 50px;
+  margin-top: 0.5px;
 }
 
 .location {
