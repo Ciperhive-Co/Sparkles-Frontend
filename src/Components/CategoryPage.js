@@ -129,9 +129,9 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
       </div>
         </div>
       </div>
-      <div>
+     <div>
         <Reviews />
-      </div>
+      </div> 
       <Footer />
     </>
   );

@@ -159,8 +159,7 @@
 
   .review-card {
     width: 100%; /* Adjust as needed */
-    margin: 0 auto 0px;
-   
+    margin-left: 20px;
   }
 
   .slider-controls {

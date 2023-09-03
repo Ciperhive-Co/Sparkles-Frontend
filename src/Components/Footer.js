@@ -36,7 +36,7 @@ const Footer = () => {
         <footer className="footerW">
           
         <div className="columnF">
-          <img src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="Company Logo" className="logo" />
+          <img src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="Company Logo" className="logo" id='lgr' />
         </div>
         <div className="columnF">
           <div className="heading">

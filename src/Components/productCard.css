@@ -102,3 +102,11 @@ div.bestselling:before {
     width: 20px;
     height: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .prod-Card{
+        height: 85%;
+        width: 85%;
+    }
+}
+

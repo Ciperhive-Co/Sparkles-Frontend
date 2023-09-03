@@ -25,19 +25,18 @@ function bar(props) {
 
   return (
     <div className='bar'>
-      <div className='prod-count'>
-        <span>{props.count} products</span>
-      </div>
       <div className='filter'>
-        <label htmlFor="filter">Sort By: </label>
         <div className="dropdown">
-          <button onClick={myFunction} className="dropbtn">Dropdown</button>
+          <button onClick={myFunction} className="dropbtn">Sort By</button>
           <div id="myDropdown" className="dropdown-content">
             <a href="/#">Link 1</a>
             <a href="/#">Link 2</a>
             <a href="/#">Link 3</a>
           </div>
         </div>
+      </div>
+      <div className='prod-count'>
+        <span className='prod-count-span'>{props.count} products</span>
       </div>
     </div>
   )

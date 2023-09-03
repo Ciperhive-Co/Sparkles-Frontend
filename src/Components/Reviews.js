@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import './Reviews.css'; // Import your CSS file for styling
@@ -54,6 +54,7 @@ const reviewsData = [
 const Reviews = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [fadeAnimation, setFadeAnimation] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
 
   const nextReview = () => {
     setFadeAnimation(true);
@@ -71,9 +72,61 @@ const Reviews = () => {
       );
       setFadeAnimation(false);
     }, 300); // 300ms is the duration of your fade-out animation
+
+
   };
-  
+   useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 768);
+
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isMobileView]);
     return (
+      <>
+      {isMobileView ? (
+        <div className="review-slider">
+        <div className="slider-controls">
+          <div className="slider-heading">Real Reviews from Real Customers</div>
+          <div className="total-reviews">{`${reviewsData.length} Reviews`}</div>
+          <div className="navigation">
+            <FontAwesomeIcon icon={faChevronLeft} onClick={prevReview} />
+            <FontAwesomeIcon icon={faChevronRight} onClick={nextReview} />
+          </div>
+        </div>
+        <div
+          className="slider-content"
+          style={{ "--current-index": currentReviewIndex}}
+        >
+          {reviewsData.slice(currentReviewIndex, currentReviewIndex + 1).map((review, index) => (
+            <div
+            key={review.id}
+            className={`review-card ${fadeAnimation ? "fadeout" : "fadein"}`}
+            >
+              <div className="review-header">
+              <div className="rating">{Array(review.rating).fill('★')}</div>
+              <div className="date">{review.date}</div>
+            </div>
+            <div className="product-info">
+              <img src={review.image} className="product-image" alt={review.product} />
+              <div className="product-details">
+              <p className="review-text">{review.review}</p>
+            <p className="reviewer-name">{review.author}</p>
+              </div>
+            </div>
+            <h3 className="product-title">{review.product}</h3>
+           <p className="product-description">{review.description}</p>
+          </div>
+          
+          ))}
+        </div>
+      </div>
+      ) : (
       <div className="review-slider">
         <div className="slider-controls">
           <div className="slider-heading">Real Reviews from Real Customers</div>
@@ -110,6 +163,8 @@ const Reviews = () => {
           ))}
         </div>
       </div>
+      )}
+      </>
     );
   };
 

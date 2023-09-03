@@ -4,19 +4,23 @@
     display: none;
   }
 
+  .filter-line {
+    display: none;
+    margin-left: 20px;
+    width: 250px;
+  }
+
   .filter-toggle-button.active {
     background-color: black;
     color: white;
   }
 
-  .filter-toggle-button {
-    border-radius: 10px;
-  }
-
   /* Show the button for screens with max-width of 768px */
   .filter-toggle-button {
+    border-radius: 10px;
     display: block;
     margin: 10px auto;
+    margin-left: -35px;
     width: 80px;
     height: 40px;
     background-color: #333;
@@ -55,7 +59,6 @@
 }
 
 .filter-line {
-  border: none;
   border-top: 2px solid grey;
   margin-left: 20px;
   width: 250px;

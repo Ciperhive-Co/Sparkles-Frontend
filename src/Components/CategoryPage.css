@@ -68,7 +68,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 60px; /* Adjust the gap as needed */
   margin: 0 auto;
-  max-width: 1200px;
   padding-left: 100px;
   padding-right: 100px;
 }
@@ -122,4 +121,67 @@
   font-family: 'Bebas Neue', sans-serif;
   cursor: pointer;
   margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .d-flexRW {
+    justify-content: flex-start; /* Keep the cards in a single row */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    margin-left: -20%; /* Reset the left margin */
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    gap: 100px;
+  }
+
+  .product-cardRW {
+    padding-left: 0%;
+    padding-right: 20%;
+  }
+
+  .RV-heading{
+    font-size: 50px;
+  }
+
+  .descriptionCP{
+    width: 100%;
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .descriptionCP-wrapper{
+    margin-top: 10%;
+    display: flex;
+    margin-left: 6%;
+    margin-right: 6%;
+    font-weight: lighter;
+  }
+
+  .category-page-container {
+    margin-top: -10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .d-flexCC {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    grid-row-start:initial;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -55%;
+  }
+
+  .category-display{
+    margin-left: 10px;
+    margin-top: 10%;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .category-heading h1{
+    font-size: 50px;
+    margin-top: 10%;
+  }
+  
 }

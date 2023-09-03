@@ -114,8 +114,9 @@
       height: fit-content;
     }
 
-    .logo{
-      margin-left: -8%;
+    #lgr{
+      margin-top: 2%;
+      margin-left: -5%;
     }
     
     .wrap{
