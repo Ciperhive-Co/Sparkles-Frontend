@@ -5,6 +5,7 @@ import {useState,useEffect} from "react";
 import Home from './Components/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CategoryPage from './Components/CategoryPage';
+import ProductPage from './Components/ProductPage';
 
 // export default App;
 function App() {
@@ -49,6 +50,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category/:categoryName" element={<CategoryPage categoryData={categoryData} />} />
+        <Route path="/products/:productName" element={<ProductPage/>} />
       </Routes>
     </div>
     </Router>

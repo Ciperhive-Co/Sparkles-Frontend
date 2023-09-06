@@ -2,8 +2,13 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './Shop.css';
+import {useNavigate} from "react-router-dom";
+
+
 
 export default function Shop() {
+
+  const navigate = useNavigate();
   const categories = [
     {
       name: 'BEST SELLERS',
@@ -122,6 +127,11 @@ export default function Shop() {
       setFadeIn(true);
     }, 100);
   };
+  
+  const handleProductItemClick = (Pname) => {
+    console.log(`Clicked on ${Pname}`);
+    navigate(`/Products/${Pname}`);
+  };
 
   return (
     <div className="shop-container">
@@ -151,6 +161,7 @@ export default function Shop() {
             key={index}
             className={`product-card ${fadeIn ? 'fade-in' : ''}`}
             style={{ animationDelay: `${index * 0.1}s` }}
+            onClick={() => handleProductItemClick(product.title)}
           >
             <div className="card-body">
               <img src={product.image} className="card-img-top" alt={product.title} />

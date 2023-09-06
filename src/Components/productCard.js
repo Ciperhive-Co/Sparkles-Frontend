@@ -1,6 +1,7 @@
 import React from 'react'
 import './productCard.css'
 
+
 function productCard(props) {
     // const images = Array(props.stars).fill('../../public/logo512.png');
     const ratings = Array(parseInt(props.stars)).fill('★');
