@@ -1,7 +1,7 @@
 import React from 'react'
 import './bar.css'
 
-function bar(props) {
+function Bar(props) {
 
   const myFunction = () => {
     document.getElementById("myDropdown").classList.toggle("show");
@@ -42,4 +42,4 @@ function bar(props) {
   )
 }
 
-export default bar
+export default Bar

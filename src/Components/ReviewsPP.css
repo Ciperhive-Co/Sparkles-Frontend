@@ -94,11 +94,11 @@
     font-family: 'Bebas Neue', sans-serif;
   }
 
-  .pagination{
+  .paginationReviewsPP{
     margin: auto;
   }
   
-  .pagination button {
+  .paginationReviewsPP button {
     display: inline-block;
     background-color: transparent;
     border: none;
@@ -110,18 +110,18 @@
     font-family: 'Bebas Neue', sans-serif;
   }
   
-  .pagination button.active {
+  .paginationReviewsPP button.active {
     text-decoration: underline;
     font-style: bold;
   }
   
-  .pagination .prev-next {
+  .paginationReviewsPP .prev-next {
     display: flex;
     align-items: center;
     margin: 0 5px;
   }
   
-  .pagination .prev-next button {
+  .paginationReviewsPP .prev-next button {
     display: inline-block;
     background-color: transparent;
     border: none;
@@ -133,7 +133,7 @@
     margin: 0;
   }
   
-  .pagination .prev-next button.disabled {
+  .paginationReviewsPP .prev-next button.disabled {
     color: #ccc;
     cursor: not-allowed;
   }

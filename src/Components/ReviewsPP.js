@@ -134,7 +134,7 @@ const ReviewsPP = (props) => {
           </li>
         ))}
       </ul>
-      <div className="pagination">
+      <div className="paginationReviewsPP">
         <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
           &lt;
         </button>

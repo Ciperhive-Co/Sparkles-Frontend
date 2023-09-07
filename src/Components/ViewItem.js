@@ -35,7 +35,7 @@ const ViewItem = ({ productData }) => {
         <div className="ratingsVI">
           {/* Display stars and total reviews */}
           <span className="stars">★★★★★</span>
-          <span className="total-reviews">{ratings.reviews} reviews</span>
+          <span className="total-reviewsVI">{ratings.reviews} reviews</span>
         </div>
         <div className="price">
           <p className="sale-price">${price.sale}</p>

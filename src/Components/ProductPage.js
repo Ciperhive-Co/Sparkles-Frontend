@@ -13,8 +13,8 @@ import imgP4 from './wax3.webp';
 import imgP5 from './wax4.webp';
 import imgP6 from './wax5.webp';
 import imgP7 from './wax6.webp';
-
-
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import ReviewsPP from "./ReviewsPP";
 import PageSections from "./PageSections";
 import Footer from "./Footer";
@@ -66,7 +66,30 @@ const dummyProduct = {
 
 const ProductPage = () => {
 
+  const navigate = useNavigate();
+  const { productName } = useParams();
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // MAKE IT ASYNC AND LOAD YOUR DATA HERE
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <img src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="Logo" className="logo" />
+        <div className="spinner"></div>
+      </div>
+    );
+  }
+    const handleProductItemClick = (Pname) => {
+      console.log(`Clicked on ${Pname}`);
+      navigate(`/Products/${Pname}`);
+    };
     const products = [
         {
           title: 'Product 1',
@@ -143,7 +166,7 @@ const ProductPage = () => {
             newprice: 'From $0.00',
         }
       ]
-    const { productName } = useParams();
+      
     return (
     <div>
       <Navbar />
@@ -162,7 +185,7 @@ const ProductPage = () => {
             </h1>
             <div className="d-flexPP">
             {products.map((product, index) => (
-            <div key={index} className="product-cardPP">
+            <div key={index} onClick={() => handleProductItemClick(product.title)} className="product-cardPP">
             <div className="card-body">
               <img src={product.image} className="card-img-top" alt={product.title} />
               <h4 className="card-title">{product.title}</h4>
@@ -190,7 +213,7 @@ const ProductPage = () => {
             </h1>
             <div className="d-flexPP">
             {MLT.map((product, index) => (
-            <div key={index} className="product-cardMLT">
+            <div key={index} onClick={() => handleProductItemClick(product.title)} className="product-cardMLT">
             <div className="card-body">
               <img src={product.image} className="card-img-top" alt={product.title} />
               <h4 className="card-title">{product.title}</h4>

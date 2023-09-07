@@ -1,23 +1,29 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Filter from "./Filter.js";
 import './CategoryPage.css';
 import Navbar from "./Navbar.js";
 import img1 from './claybarkit.webp';
 import img2 from './claybarkit.webp';
 import img3 from './claybarkit.webp';
-import Bar from './bar';
-import ProductCard from './productCard';
+import Bar from './Bar.js';
+import ProductCard from './ProductCard.js';
 import Reviews from './Reviews.js'
 import Footer from "./Footer.js";
 import { useState, useEffect } from "react";
 
-
 const CategoryPage = ({ categoryData, subcategoryContent }) => {
+ 
+  const navigate = useNavigate();
+  const handleProductItemClick = (Pname) => {
+    console.log(`Clicked on ${Pname}`);
+    navigate(`/Products/${Pname}`);
+  };
   const { categoryName } = useParams();
   const subheadings = categoryData[categoryName] || [];
-
   const [isLoading, setIsLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+
 
   useEffect(() => {
 
@@ -37,6 +43,154 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
     );
   }
 
+
+
+  const productCards = [
+    {
+      title: "Product 1",
+      newprice: 19.99,
+      stars: 4.5,
+      NoOfReviews: 100,
+      image: img1,
+      status: "none",
+    },
+    {
+      title: "Product 2",
+      newprice: 29.99,
+      stars: 4.2,
+      NoOfReviews: 75,
+      image: img1,
+      status: "bestselling",
+    },
+    {
+      title: "Product 3",
+      newprice: 14.99,
+      stars: 4.8,
+      NoOfReviews: 150,
+      image: img1,
+      status: "soldout",
+    },
+    {
+      title: "Product 4",
+      newprice: 39.99,
+      stars: 4.0,
+      NoOfReviews: 50,
+      image: img1,
+      status: "none",
+    },
+    {
+      title: "Product 5",
+      newprice: 19.99,
+      stars: 4.5,
+      NoOfReviews: 100,
+      image: img1,
+      status: "none",
+    },
+    {
+      title: "Product 6",
+      newprice: 29.99,
+      stars: 4.2,
+      NoOfReviews: 75,
+      image: img1,
+      status: "bestselling",
+    },
+    {
+      title: "Product 7",
+      newprice: 14.99,
+      stars: 4.8,
+      NoOfReviews: 150,
+      image: img1,
+      status: "soldout",
+    },
+    {
+      title: "Product 8",
+      newprice: 39.99,
+      stars: 4.0,
+      NoOfReviews: 50,
+      image: img1,
+      status: "none",
+    },
+    {
+      title: "Product 9",
+      newprice: 19.99,
+      stars: 4.5,
+      NoOfReviews: 100,
+      image: img1,
+      status: "none",
+    },
+    {
+      title: "Product 10",
+      newprice: 29.99,
+      stars: 4.2,
+      NoOfReviews: 75,
+      image: img1,
+      status: "bestselling",
+    },
+    {
+      title: "Product 11",
+      newprice: 14.99,
+      stars: 4.8,
+      NoOfReviews: 150,
+      image: img1,
+      status: "soldout",
+    },
+    {
+      title: "Product 12",
+      newprice: 39.99,
+      stars: 4.0,
+      NoOfReviews: 50,
+      image: img1,
+      status: "none",
+    },
+    {
+      title: "Product 13",
+      newprice: 19.99,
+      stars: 4.5,
+      NoOfReviews: 100,
+      image: img1,
+      status: "none",
+    },
+    {
+      title: "Product 14",
+      newprice: 29.99,
+      stars: 4.2,
+      NoOfReviews: 75,
+      image: img1,
+      status: "bestselling",
+    },
+    {
+      title: "Product 15",
+      newprice: 14.99,
+      stars: 4.8,
+      NoOfReviews: 150,
+      image: img1,
+      status: "soldout",
+    },
+    {
+      title: "Product 16",
+      newprice: 39.99,
+      stars: 4.0,
+      NoOfReviews: 50,
+      image: img1,
+      status: "none",
+    },
+    {
+      title: "Product 17",
+      newprice: 19.99,
+      stars: 4.5,
+      NoOfReviews: 100,
+      image: img1,
+      status: "none",
+    },
+    {
+      title: "Product 18",
+      newprice: 29.99,
+      stars: 4.2,
+      NoOfReviews: 75,
+      image: img1,
+      status: "bestselling",
+    },
+  ];
 
   const products = [
     {
@@ -61,6 +215,16 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
       newprice: 'From $0.00',
     }
   ]
+  const productsPerPage = 9; // Number of products to display per page
+  const totalProducts = productCards.length; // Replace this with your actual product data
+  const totalPages = Math.ceil(totalProducts / productsPerPage);
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
+
+  const startIndex = (currentPage - 1) * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
 
   return (
     <>
@@ -79,23 +243,49 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
         <Filter subcategoryContent={categoryName} subheadingContent={subheadings} />
       </div>
 
-      <div className="Bar-container">  
-        <Bar count="9" />
-        <div className="additional-content">
-        <div className="d-flexCC">
-        <ProductCard discription='Product 1' price='10' stars='3' NoOfReviews='3' img = {img1} status='soldout'/>
-        <ProductCard discription='Product 2' price='10' stars='5' NoOfReviews='7' img = {img1} status='bestselling'/>
-        <ProductCard discription='Product 3' price='10' stars='1' NoOfReviews='27' img = {img1} status='none'/>
-        <ProductCard discription='Product 4' price='10' stars='4' NoOfReviews='47' img = {img1} status='none'/>
-        <ProductCard discription='Product 5' price='10' stars='5' NoOfReviews='17' img = {img1} status='none'/>
-        <ProductCard discription='Product 6' price='10' stars='2' NoOfReviews='27' img = {img1} status='none'/>
-        <ProductCard discription='Product 7' price='10' stars='1' NoOfReviews='47' img = {img1} status='none'/>
-        <ProductCard discription='Product 8' price='10' stars='2' NoOfReviews='157' img = {img1} status='bestselling'/>
-        <ProductCard discription='Product 9' price='10' stars='3' NoOfReviews='234' img = {img1} status='soldout'/>
-        </div>
+      <div className="Bar-container">
+          <Bar count="9" />
+          <div className="additional-content">
+            <div className="d-flexCC">
+              {productCards.slice(startIndex, endIndex).map((product, index) => (
+                <ProductCard
+                  key={index}
+                  discription={product.title} // Note: Typo in your code, should be 'description'
+                  price={product.newprice}
+                  stars={product.stars}
+                  NoOfReviews={product.NoOfReviews}
+                  img={product.image}
+                  status={product.status}
+                />
+              ))}
+            </div>
+        
+        <div className="paginationCP">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          &lt;
+        </button>
+        {Array.from({ length: totalPages }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => handlePageChange(index + 1)}
+            className={currentPage === index + 1 ? 'active' : ''}
+          >
+            {index + 1}
+          </button>
+        ))}
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        >
+          &gt;
+        </button>
+      </div>
         </div>
       </div>
-      </div>
+    </div>
       
 
       <div className="descriptionCP-wrapper">
@@ -113,7 +303,7 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
             </h1>
             <div className="d-flexRW">
             {products.map((product, index) => (
-            <div key={index} className="product-cardRW">
+            <div key={index} onClick={() => handleProductItemClick(product.title)} className="product-cardRW">
             <div className="card-body">
               <img src={product.image} className="card-img-top" alt={product.title} />
               <h4 className="card-title">{product.title}</h4>
