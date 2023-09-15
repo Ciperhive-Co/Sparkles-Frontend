@@ -89,7 +89,8 @@
       margin-left: -20%; /* Reset the left margin */
       flex-wrap: nowrap;
       overflow-y: hidden;
-      gap: 100px;
+      gap: 65px;
+      width: 110vw;
     }
   
     .product-cardPP {
@@ -107,4 +108,6 @@
     .product-display{
       margin-top: 5%;
     }
+
+    
 }
