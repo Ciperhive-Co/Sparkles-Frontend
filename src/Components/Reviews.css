@@ -179,11 +179,19 @@
     font-size: 24px;
     margin-right: 0; /* Reset margin */
   }
+
+  .slider-controls {
+    border-bottom: 0;
+  }
+
+  .navigation{
+    gap: 300px;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .review-card {
     width: 90%; /* Adjust as needed */
-    
   }
 }
+

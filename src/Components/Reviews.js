@@ -95,8 +95,8 @@ const Reviews = () => {
           <div className="slider-heading">Real Reviews from Real Customers</div>
           <div className="total-reviews">{`${reviewsData.length} Reviews`}</div>
           <div className="navigation">
-            <FontAwesomeIcon icon={faChevronLeft} onClick={prevReview} />
-            <FontAwesomeIcon icon={faChevronRight} onClick={nextReview} />
+            <div><FontAwesomeIcon icon={faChevronLeft} onClick={prevReview} /></div>
+            <div><FontAwesomeIcon icon={faChevronRight} onClick={nextReview} /></div>
           </div>
         </div>
         <div

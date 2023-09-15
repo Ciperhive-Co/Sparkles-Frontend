@@ -250,7 +250,7 @@ const CategoryPage = ({ categoryData, subcategoryContent }) => {
               {productCards.slice(startIndex, endIndex).map((product, index) => (
                 <ProductCard
                   key={index}
-                  discription={product.title} // Note: Typo in your code, should be 'description'
+                  discription={product.title} 
                   price={product.newprice}
                   stars={product.stars}
                   NoOfReviews={product.NoOfReviews}

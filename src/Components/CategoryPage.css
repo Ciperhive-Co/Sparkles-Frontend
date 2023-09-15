@@ -207,7 +207,7 @@
     margin: 0;
     padding-left: 0;
     padding-right: 0;
-    margin-left: -55%;
+    margin-left: -87%;
   }
 
   .category-display{
@@ -219,6 +219,11 @@
   .category-heading h1{
     font-size: 50px;
     margin-top: 10%;
+  }
+
+  .paginationCP{
+    margin-top: 7%;
+    margin-left: -10%;
   }
   
 }
