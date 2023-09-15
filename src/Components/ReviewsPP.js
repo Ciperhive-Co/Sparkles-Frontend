@@ -110,7 +110,7 @@ const ReviewsPP = (props) => {
         </div>
       <ul>
         {currentReviews.map((review) => (
-          <li key={review.id} className="review-itemPP">
+          <div key={review.id} className="review-itemPP">
             <div className="avatarPP">
               {getInitials(review.customerName)}
             </div>
@@ -131,7 +131,7 @@ const ReviewsPP = (props) => {
               <p>{review.description}</p>
               </div>
             </div>
-          </li>
+          </div>
         ))}
       </ul>
       <div className="paginationReviewsPP">

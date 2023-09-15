@@ -8,7 +8,7 @@ function FeaturesContent(props) {
         <div className='features'>
           <h1>The Best Ceramic Car Wax </h1>
           <p>{props.content}</p>
-          <img src={img} alt='' />
+          <img className= 'image' src={img} alt='' />
         </div>
       );
 }

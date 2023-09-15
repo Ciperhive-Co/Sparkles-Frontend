@@ -137,3 +137,38 @@
     color: #ccc;
     cursor: not-allowed;
   }
+
+
+  @media screen and (max-width: 768px) {
+  .ReviewsPP {
+    padding: 25px; 
+  }
+
+  .review-itemPP {
+    align-items: flex-start;
+    margin-left: -7%;
+    margin-top: 2%;
+    padding-top: 3%;
+  }
+
+  .avatarPP{
+    margin-top: 2%;
+  }
+  
+  #ratingPP{
+    margin-top: -4%;
+  }
+  
+  .CustomerNameRB{
+    margin-top: 3%;
+  }
+
+  .DateRB{
+    margin-top: 2%;
+  }
+
+  .ReviewsDescription-PP{
+    margin-left: -25%;
+  }
+}
+  

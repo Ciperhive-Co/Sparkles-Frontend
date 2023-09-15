@@ -1,5 +1,6 @@
 import React from 'react'
 import QADropdown from './QADropdown';
+import './FAQsContent.css';
 
 function FAQsContent(props) {
     return (

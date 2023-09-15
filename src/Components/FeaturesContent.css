@@ -17,4 +17,8 @@
   text-align: left;
 }
 
-
+@media screen and (max-width: 768px) {
+image{
+  width:50px;
+}
+}
