@@ -30,8 +30,10 @@
     justify-content: space-around;
     row-gap: 1px;
     margin: 0 auto;
-    width: 100%;
+    max-width: 1200px;
     margin-top: 0;
+    padding-left: 100px;
+    padding-right: 100px;
   }
   
   .product-cardPP {
@@ -86,11 +88,10 @@
     .d-flexPP {
       justify-content: flex-start; /* Keep the cards in a single row */
       overflow-x: scroll; /* Enable horizontal scrolling */
-      margin-left: -20%; /* Reset the left margin */
+      margin-left: -45%; /* Reset the left margin */
       flex-wrap: nowrap;
       overflow-y: hidden;
-      gap: 65px;
-      width: 110vw;
+      gap: 100px;
     }
   
     .product-cardPP {
