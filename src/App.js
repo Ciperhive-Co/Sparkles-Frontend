@@ -55,7 +55,7 @@ function App() {
     quantity: 1,
     priceBefore: 13.99,
     priceAfter: 9.99,
-    image: 'https://via.placeholder.com/40x40',
+    image: img1,
   }
   
   return (
