@@ -120,6 +120,10 @@ const Footer = () => {
             <img src={process.env.PUBLIC_URL + '/assets/instagram.png'} className="instagram"  alt="instagram"/>
             
             <img src={process.env.PUBLIC_URL + '/assets/youtube.png'} className="youtube"  alt="youtube"/>
+
+            <img src={process.env.PUBLIC_URL + '/assets/Linkedin.png'} className="linkedin"  alt="linkedin"/>
+
+            <img src={process.env.PUBLIC_URL + '/assets/tiktok.png'} className="tiktok"  alt="tiktok"/>
             </div>
           </div>
         </div>

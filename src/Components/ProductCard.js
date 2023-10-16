@@ -37,6 +37,7 @@ const ProductCard = (props) => {
                     </div>
                     <span className='text-dull'>{props.NoOfReviews}</span>
                 </div>
+                <button className="shop-button">Shop</button>
             </div>
         </div>
     )

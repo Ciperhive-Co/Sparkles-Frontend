@@ -67,18 +67,19 @@ const Navbar = ({shouldExecute = true}) => {
     "Interior Care",
     "Accessories",
     "Lubricants",
-    "Filters"
+    "Filters",
+    "Wholesaler & Distributor"
   ];
 
   const dropdownContents = {
 
     "Exterior Care" : <SubCat
     images={[img1]}
-    categories={['New Releases', 'Bundles', 'Shampoes', 'Accessories' ]}
+    categories={['New Releases', 'Bundles', 'Shampoos', 'Accessories' ]}
   />,
     "Interior Care" : <SubCat
     images={[img1]}
-    categories={['New Releases', 'Interior Cleaner', 'Microfiber','Accessories']}
+    categories={['New Releases', 'Interior Cleaner', 'Microfiber','Accessories', 'Fragrances', 'Cleaning Kits']}
   />,
     "Accessories" : <SubCat
     images={[img1]}
@@ -86,12 +87,16 @@ const Navbar = ({shouldExecute = true}) => {
   />,
     "Lubricants" : <SubCat
     images={[img1]}
-    categories={['Bike Engine','Car Engine','Gear Oil','Break Oil','Radiator Coolent','Battery Water']}
+    categories={['Bike Engine Oil','Car Engine Oil','Gear Oil','Break Oil','Radiator Coolent','Battery Water']}
   />,
     "Filters": <SubCat
     images={[img1]}
     categories={['Air Filter','Oil Filter','AC Filter']}
-  />
+  />,
+  "Wholesaler & Distributor": <SubCat
+  images={[img1]}
+  categories={['Category1','Category2','Category3']}
+/>,
   };
 
   const handleMenuItemClick = (item) => {

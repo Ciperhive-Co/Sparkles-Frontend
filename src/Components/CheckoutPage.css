@@ -235,3 +235,99 @@
   .back-icon{
     margin-right: 6%;
   }
+  
+  @media screen and (max-width: 768px) {
+    .SecureCheckout {
+      box-sizing: border-box;
+      height: 100%;
+      padding-left: 0%;
+      padding-right: 0%;
+      margin-left: 0%;
+      padding: 10%;
+    }
+
+    .Buttons-Section{
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+
+    .BackToCart{
+      margin: auto;
+    }
+
+    .collapsible {
+      margin-top: 5%;
+    }
+    
+    .collapsible.open .collapsible-content {
+      display: block;
+    }
+    
+    .collapsible-header {
+      display: flex;
+      align-items: center;
+      background-color: #f2f2f2;
+      padding: 10px;
+      cursor: pointer;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    
+    .cart-icon {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    
+    .plus-sign {
+      font-size: 25px;
+      margin-left: auto;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    .collapsible-content {
+      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease-in; 
+    }
+    .collapsible-content.expanded {
+      max-height: 1000px; 
+      margin-top: 5px; 
+    }
+
+    .showOS{
+      font-family: "Bebas Neue", sans-serif;
+    }
+
+    .Parent {
+      flex-direction: column;
+    }
+
+    .OrderSummary {
+      width: 100%;
+      background-color: #f2f2f2;
+    }
+
+      .FL-container {
+        gap: 10px;
+    }
+
+    .collapsibleOS {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease-in; 
+      margin: 0;
+      padding: 0;
+    }
+    
+    .collapsibleOS.expanded {
+      max-height: 1000px; 
+    }
+
+    .collapsibleOS {
+      list-style: none;
+      padding: 0;
+    }
+
+  }

@@ -9,20 +9,9 @@
     padding-bottom: 2%;
   }
 
-  .MLT{
-    margin-bottom: 10%;
-  }
 
-  .MLT-heading{
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    justify-content: center;
-    text-align: center;
-    margin-top: 10%;
-    padding-bottom: 2%;
-  }
+
+
 
   .d-flexPP {
     display: flex;
@@ -58,6 +47,7 @@
 
   .ReviewsPP-wrapper{
     margin-top: 5%;
+    margin-bottom: 100px;
   }
 
   .product-display{
@@ -70,19 +60,7 @@
     font-size: 21px;
   }
 
-  .product-cardMLT {
-    width: calc(15% - 20px);
-    max-width: 240px;
-    height: auto;
-    border-radius: 5px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-family: 'Bebas Neue', sans-serif;
-    cursor: pointer;
-    margin: 10px;
-  }
+
 
   @media screen and (max-width: 768px) {
     .d-flexPP {
@@ -98,10 +76,10 @@
       padding-left: 25%;
     }
 
-    .product-cardMLT {
+   /* .product-cardMLT {
         padding-left: 25%;
       }
-  
+  */
     .FBW-heading{
       font-size: 50px;
     }

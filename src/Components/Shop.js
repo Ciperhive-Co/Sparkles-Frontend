@@ -171,6 +171,7 @@ export default function Shop() {
                 <p className="newprice">{product.newprice}</p>
                 <p className="oldprice">{product.oldprice}</p>
               </div>
+              <button className="shop-button">Shop</button>
             </div>
           </div>
         ))}

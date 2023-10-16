@@ -84,7 +84,18 @@
     
     margin-right: 10px;
   }
-  
+  .linkedin {
+    width: 30px;
+    height: 30px;
+    
+    margin-right: 10px;
+  }
+  .tiktok {
+    width: 30px;
+    height: 30px;
+    
+    margin-right: 10px;
+  }
   .youtube {  
     width: 30px;
     height: 30px; 

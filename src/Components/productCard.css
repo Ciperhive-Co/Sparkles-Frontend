@@ -1,7 +1,8 @@
 .prod-Card{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
     margin: 20px;
@@ -21,7 +22,15 @@
     z-index: -1;
 }
 
-
+.shop-button {
+    background-color: #24245a; /* Set your desired background color */
+    color: lightgrey; /* Text color */
+    padding: 5px 30px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+  }
 .img-container {
     position: relative; /* Create a positioning context */
     height: 100%;

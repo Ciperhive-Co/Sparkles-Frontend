@@ -4,15 +4,11 @@ import './ViewItem.css'; // Import your CSS file for styling
 
 const ViewItem = ({ productData }) => {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
-  const { images, name, ratings, price, productCode, sizes, stockStatus } = productData;
+  const { images, name, ratings, price, productCode, stockStatus } = productData;
 
   // State to keep track of the selected image
   const [selectedImage, setSelectedImage] = useState(images[0]);
 
-  const handleSizeClick = (size) => {
-    // Handle size click logic here (e.g., update state)
-    console.log(`Selected size: ${size}`);
-  };
   useEffect(() => {
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 768);
@@ -58,14 +54,7 @@ const ViewItem = ({ productData }) => {
            <p className="discount-tag">{price.discount}% off</p>
          </div>
          <p className="product-code">SKU: {productCode}</p>
-         <div className="sizes">
-           {sizes.map((size, index) => (
-             <div key={index} className="size" onClick={() => handleSizeClick(size.name)}>
-               <p>{size.name}</p>
-               <img src={size.image} alt={size.name} />
-             </div>
-           ))}
-         </div>
+        
          <p className="stock-status">{stockStatus}</p>
          <button id="addtocart">Add to Cart</button>
        </div>
@@ -102,14 +91,7 @@ const ViewItem = ({ productData }) => {
               <p className="discount-tag">{price.discount}% off</p>
             </div>
             <p className="product-code">SKU: {productCode}</p>
-            <div className="sizes">
-              {sizes.map((size, index) => (
-                <div key={index} className="size" onClick={() => handleSizeClick(size.name)}>
-                  <p>{size.name}</p>
-                  <img src={size.image} alt={size.name} />
-                </div>
-              ))}
-            </div>
+           
             <p className="stock-status">{stockStatus}</p>
             <button id="addtocart">Add to Cart</button>
           </div>

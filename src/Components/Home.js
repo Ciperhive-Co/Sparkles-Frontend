@@ -9,6 +9,7 @@ import Footer from "./Footer"; // Import your Footer component
 import "./Home.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from "./Navbar";
+import ReviewsHome from "./ReviewsHome";
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       <BlogSection />
       <div className="instaHeading">@Sparkles.co</div>
       <ImageReel />
+      <ReviewsHome/>
       <Footer />
     </div>
   );

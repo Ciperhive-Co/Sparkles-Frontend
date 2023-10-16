@@ -113,27 +113,7 @@ const Filter = ({ subcategoryContent, subheadingContent }) => {
             </label>
           </div>
 
-          <hr className="filter-line" />
-
-          <div className="filter-price-section">
-            <h2 className="filter-price-heading">Price</h2>
-            <label className="filter-price-checkbox">
-              <input type="checkbox" />
-              <span className="filter-price-label">20$</span>
-            </label>
-            <label className="filter-price-checkbox">
-              <input type="checkbox" />
-              <span className="filter-price-label">30$</span>
-            </label>
-            <label className="filter-price-checkbox">
-              <input type="checkbox" />
-              <span className="filter-price-label">40$</span>
-            </label>
-            <label className="filter-price-checkbox">
-              <input type="checkbox" />
-              <span className="filter-price-label">50$</span>
-            </label>
-          </div>
+          
         </Modal.Body>
       </Modal>
 
@@ -184,27 +164,6 @@ const Filter = ({ subcategoryContent, subheadingContent }) => {
           </label>
         </div>
 
-        <hr className="filter-line" />
-
-        <div className="filter-price-section">
-          <h2 className="filter-price-heading">Price</h2>
-          <label className="filter-price-checkbox">
-          <input type="checkbox" />
-            <span className="filter-price-label">20$</span>
-          </label>
-          <label className="filter-price-checkbox">
-          <input type="checkbox" />
-            <span className="filter-price-label">30$</span>
-          </label>
-          <label className="filter-price-checkbox">
-          <input type="checkbox" />
-            <span className="filter-price-label">40$</span>
-          </label>
-          <label className="filter-price-checkbox">
-          <input type="checkbox" />
-            <span className="filter-price-label">50$</span>
-          </label>
-        </div>
       </div>
       <hr className="filter-line" />
     

@@ -121,51 +121,6 @@ const ProductPage = () => {
           }
       ]
 
-      const MLT = [
-        {
-          title: 'Product 1',
-          description: 'This is the description of the product',
-          image: img1,
-          oldprice: '$20.00',
-          newprice: 'From $0.00',
-        },
-        {
-          title: 'Product 2',
-          description: 'This is the description of the product',
-          image: img2,
-          oldprice: '$10.00',
-          newprice: 'From $0.00',
-        },
-        {
-          title: 'Product 3',
-          description: 'This is the description of the product',
-          image: img3,
-          oldprice: '$19.00',
-          newprice: 'From $0.00',
-        },
-        {
-            title: 'Product 4',
-            description: 'This is the description of the product',
-            image: img3,
-            oldprice: '$19.00',
-            newprice: 'From $0.00',
-        },
-
-        {
-            title: 'Product 5',
-            description: 'This is the description of the product',
-            image: img3,
-            oldprice: '$19.00',
-            newprice: 'From $0.00',
-        },
-        {
-            title: 'Product 6',
-            description: 'This is the description of the product',
-            image: img3,
-            oldprice: '$19.00',
-            newprice: 'From $0.00',
-        }
-      ]
       
     return (
     <div>
@@ -206,24 +161,7 @@ const ProductPage = () => {
       <ReviewsPP count = '271'/>
       </div>
       
-      <div className="MLT">
-        <div className="MLT-headingWrapper">
-            <h1 className="MLT-heading">
-            More Like This
-            </h1>
-            <div className="d-flexPP">
-            {MLT.map((product, index) => (
-            <div key={index} onClick={() => handleProductItemClick(product.title)} className="product-cardMLT">
-            <div className="card-body">
-              <img src={product.image} className="card-img-top" alt={product.title} />
-              <h4 className="card-title">{product.title}</h4>
-            </div>
-          </div>
-          
-        ))}
-      </div>
-        </div>
-      </div>
+   
 
      <Footer />
 
