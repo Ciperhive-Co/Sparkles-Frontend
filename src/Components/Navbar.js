@@ -184,7 +184,7 @@ const Navbar = ({shouldExecute = true}) => {
       </ul>
     </Modal.Body>
     <Modal.Footer>
-      <Button className="login-button">
+      <Button className="login-button" onClick={handleLoginIconClick}>
         <FontAwesomeIcon icon={faUser} style={{ fontSize: "24px", color: "#24245a" }} />
         <span className="button-text">Log in</span>
       </Button>
