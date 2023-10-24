@@ -57,7 +57,6 @@
 .d-flexCC {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 140px; /* Adjust the gap as needed */
   padding-right: 100px;
   margin-left: -10%;
 }

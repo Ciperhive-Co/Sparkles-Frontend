@@ -109,6 +109,11 @@ const Navbar = ({shouldExecute = true}) => {
     navigate(`/CartPage`);
   };
 
+  const handleLoginIconClick = () => {
+    console.log(`Clicked on Login`);
+    navigate(`/Login`);
+  };
+
   function getDropdownContent(item) {
     return dropdownContents[item];
   }
@@ -222,7 +227,7 @@ const Navbar = ({shouldExecute = true}) => {
             </div>
             <div className="navbar-right">
               <div className="child1">
-                <button className="login-btn">
+                <button className="login-btn" onClick={handleLoginIconClick}>
                   <FontAwesomeIcon
                     icon={faUser}
                     style={{ fontSize: "48px", color: "#24245a" }}

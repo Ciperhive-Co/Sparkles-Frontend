@@ -43,6 +43,8 @@
   }
 
 .Middle{
+    display: flex;
+    flex-direction: row;
     padding-bottom: 30px;
     margin-top:30px;
     margin-left: 50px;
@@ -54,6 +56,7 @@
 .cartproductCard {
     display: flex;
     justify-content: space-between; /* Adjust alignment as needed */
+    overflow-x: auto;
 }
 
 .productname{
@@ -175,9 +178,9 @@
     
   }
   
-  .Middle{
+  /* .Middle{
     display: flex;
-  }
+  } */
 
   .cartContent{
     flex: 60%;
@@ -222,6 +225,12 @@
     margin-top:140px;
     border: none;
     background: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .Middle {
+        flex-direction: column;
+    }
   }
   
 

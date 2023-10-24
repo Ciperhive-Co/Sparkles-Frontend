@@ -9,6 +9,9 @@ import ProductPage from './Components/ProductPage';
 import CheckoutPage from './Components/CheckoutPage';
 import Cart from './Components/Cart'
 import img1 from './Components/CartDummyImg.jpg';
+import Login from './Components/Login';
+import SignUp from './Components/SignUp';
+import ScrollToTop from './Components/ScrollToTop';
 
 
 // export default App;
@@ -66,12 +69,15 @@ function App() {
           <p>Get 10% off on all products. Use code: PROMO10</p>
         </div>
       </div>
+       <ScrollToTop/>
        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/category/:categoryName" element={<CategoryPage categoryData={categoryData} />} />
         <Route path="/products/:productName" element={<ProductPage/>} />
         <Route path="/CartPage" element={<Cart products={[dummyProduct, dummyProduct2]}/>} />
         <Route path="/CheckoutPage" element={<CheckoutPage/>} />
+        <Route path="/Login" element={<Login/>}/>
+        <Route path="/SignUp" element={<SignUp/>}/>
       </Routes>  
     </div>
     </Router>
