@@ -116,8 +116,9 @@ div.bestselling:before {
 
 @media screen and (max-width: 768px) {
     .prod-Card{
-        height: 85%;
-        width: 85%;
+        height: 65%;
+        width: 65%;
+        margin-top: 15%;
     }
 }
 

@@ -52,6 +52,7 @@
 .filter-container {
   width: 35%; /* Adjust the width as needed */
   margin-top: 18%;
+  height: 15%;
 }
 
 .d-flexCC {
@@ -201,12 +202,11 @@
   .d-flexCC {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    grid-row-start:initial;
+    grid-gap: 0px;
     margin: 0;
     padding-left: 0;
-    padding-right: 0;
-    margin-left: -87%;
+    padding-right: 0px;
+    margin-left: -95%;
   }
 
   .category-display{

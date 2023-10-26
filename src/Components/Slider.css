@@ -16,4 +16,10 @@
     margin: 0 auto; /* Center the image horizontally */
   }
 
+  @media (max-width: 768px) {
+    .carousel {
+      margin-top: 5%;
+    }
+  }
+
 
