@@ -180,10 +180,12 @@ const Cart = ({products = []}) => {
     <Navbar/>
     <div className="header">
         <div className="text">YOUR CART</div>
+        <div classname="secure-section">
         <span className="lock-symboll">
-          <FontAwesomeIcon icon={faLock} /> {/* Replace with Font Awesome lock icon */}
+          <FontAwesomeIcon icon={faLock} /> 
+            SECURE
         </span>
-        <div className="text2">SECURE</div>
+        </div>
     </div>
 
     <div className="Middle">
@@ -221,7 +223,15 @@ const Cart = ({products = []}) => {
                     
                 ))}
 
-                <div className="contentfooter">
+              
+        </div>
+        
+        <div className="Summary">
+                    <CartOrderSummary shipping={5.99} tax={0} total={total} />
+        </div>
+
+    </div>
+    <div className="contentfooter">
                     <div className="contentfooter1">
                         <p>Need Help? Call Us.</p>
                         <p className='number'>(866) 822-3670</p>
@@ -240,14 +250,7 @@ const Cart = ({products = []}) => {
                         <img src={imgg} alt="" className='footerimg'/>
                         </div>
                     </div>
-                </div>
         </div>
-        
-        <div className="Summary">
-                    <CartOrderSummary shipping={5.99} tax={0} total={total} />
-        </div>
-
-    </div>
 
     <div className="cartproductCard">
         <button onClick={handlePrev} className="arrow-button">
@@ -264,6 +267,7 @@ const Cart = ({products = []}) => {
           </span>
         </button>
       </div>
+      
     <Footer/>
     </>
   );

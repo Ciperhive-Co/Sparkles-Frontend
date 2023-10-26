@@ -193,6 +193,8 @@
 
   .contentfooter{
     display: flex;
+    max-width: 30%;
+    margin-left: 100px;
   }
 
   .contentfooter1{
@@ -226,9 +228,17 @@
     border: none;
     background: none;
   }
-
+.secure-section{
+    align-self: right;
+}
   @media screen and (max-width: 768px) {
     .Middle {
+        flex-direction: column;
+    }
+    .contentfooter{
+        flex-direction: column;
+    }
+    .productpricequantity{
         flex-direction: column;
     }
   }
