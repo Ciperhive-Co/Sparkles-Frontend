@@ -2,17 +2,11 @@ import React, { useState } from 'react';
 import './CartOrderSummary.css'; // Create this CSS file for styling
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
 
 
 const CartOrderSummary = ({ shipping = 0, tax = 0, total = 0}) => {
     const [isCouponOpen, setIsCouponOpen] = useState(false);
-    const navigate = useNavigate();
 
-    const handleCheckoutClick = () => {
-      console.log(`Clicked on Checkout`);
-      navigate(`/CheckoutPage`);
-    };
   
     const toggleCoupon = () => {
       setIsCouponOpen(!isCouponOpen);
@@ -78,16 +72,6 @@ const CartOrderSummary = ({ shipping = 0, tax = 0, total = 0}) => {
             <div className="label">Total</div>
             <div className="value">${totalCost}</div>
             </div>
-        </div>
-
-        {/* Checkout button */}
-        <div className="section-checkout">
-          <button onClick={handleCheckoutClick} className="roundbutton">
-            <span className="locksymbol">
-              <FontAwesomeIcon icon={faLock} />
-            </span>
-            Checkout
-          </button>
         </div>
 
         {/* Final note section */}

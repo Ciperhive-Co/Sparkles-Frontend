@@ -11,6 +11,9 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
+
+
 
 
   const dummyproducts = [
@@ -67,6 +70,28 @@ import Footer from './Footer';
 
 
 const Cart = ({products = []}) => {
+
+    const navigate = useNavigate();
+    const handleCheckoutClick = () => {
+      console.log(`Clicked on Checkout`);
+      navigate(`/CheckoutPage`);
+    };
+
+    const isSmallScreen = () => window.innerWidth < 950;
+    const [smallScreen, setSmallScreen] = useState(isSmallScreen());
+
+    useEffect(() => {
+      const handleResize = () => {
+        setSmallScreen(isSmallScreen());
+      };
+
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+
     const [total, setTotal] = useState(0);
     const [quantityArray, setQuantityArray] = useState([]);
     const [bPriceArray, setBPriceArray] = useState([]);
@@ -209,10 +234,10 @@ const Cart = ({products = []}) => {
                                 <button className="plusButton" onClick={() => handleIncrement(product.priceAfter, index)}> <span className="plus-minus-sign">+</span></button>
                                 </div>
                             </div>
-                            <div className="calculatedprice">
+                            {/* <div className="calculatedprice">
                                 <div className="calculatedprice1">${aPriceArray[index]}</div>
                                 <div className="calculatedprice2">${bPriceArray[index]}</div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="editRemove">
                             <button>Remove</button>
@@ -267,8 +292,24 @@ const Cart = ({products = []}) => {
           </span>
         </button>
       </div>
-      
-    <Footer/>
+
+    {smallScreen ? (
+        <div className='RespFooterCart'>
+          <Footer/>
+          <div className='StickyCheckoutBtn'>
+            <button onClick={handleCheckoutClick} className="StickyRoundButton">
+              <span className="locksymbol">
+                <FontAwesomeIcon icon={faLock} />
+              </span>
+              Checkout
+            </button>
+            <p style={{marginTop:'2%'}}>By placing your order, you agree to our <u>Terms & Conditions</u>.</p>
+          </div>
+        </div>
+      ) : (
+        <Footer/>
+      )}
+
     </>
   );
 };
