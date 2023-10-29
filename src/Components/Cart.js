@@ -205,12 +205,16 @@ const Cart = ({products = []}) => {
     <Navbar/>
     <div className="header">
         <div className="text">YOUR CART</div>
+
+        <div style={{marginTop: "8px"}} >
         <div classname="secure-section">
         <span className="lock-symboll">
           <FontAwesomeIcon icon={faLock} /> 
-            SECURE
+         <span style={{marginLeft: "5px"}}>SECURE</span>
         </span>
         </div>
+        </div>
+
     </div>
 
     <div className="Middle">
@@ -303,7 +307,7 @@ const Cart = ({products = []}) => {
               </span>
               Checkout
             </button>
-            <p style={{marginTop:'2%', fontSize: '14px'}}>By placing your order, you agree to our <u>Terms & Conditions</u>.</p>
+            <p style={{marginTop:'2%', fontSize: '12px'}}>By placing your order, you agree to our <u>Terms & Conditions</u>.</p>
           </div>
         </div>
       ) : (

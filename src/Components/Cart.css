@@ -268,7 +268,9 @@
   }
 .secure-section{
     align-self: right;
+    margin-top: 60%;
 }
+
   @media screen and (max-width: 768px) {
     .Middle {
         flex-direction: column;
