@@ -303,7 +303,7 @@ const Cart = ({products = []}) => {
               </span>
               Checkout
             </button>
-            <p style={{marginTop:'2%'}}>By placing your order, you agree to our <u>Terms & Conditions</u>.</p>
+            <p style={{marginTop:'2%', fontSize: '14px'}}>By placing your order, you agree to our <u>Terms & Conditions</u>.</p>
           </div>
         </div>
       ) : (
