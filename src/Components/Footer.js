@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Footer.css'; // Make sure to create a corresponding CSS file
 import CollapsibleMenu from './CollapsibleMenu';
+import {useNavigate} from "react-router-dom";
+
 
 const Footer = () => {
 
@@ -8,6 +10,13 @@ const Footer = () => {
   const [smallScreen, setSmallScreen] = useState(isSmallScreen());
   const [emailValue, setEmailValue] = useState('');
   const [emailFocused, setEmailFocused] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSDSClick = () => {
+    console.log(`Clicked on SDS`);
+    navigate(`/SDS`);
+  };
+
 
   const handleEmailChange = (event) => {
     setEmailValue(event.target.value);
@@ -158,7 +167,7 @@ const Footer = () => {
             <li>Order Lookup</li>
             <li>Car Detailers Near Me</li>
             <li>Affiliate Program</li>
-            <li>SDS</li>
+            <li onClick={handleSDSClick}>SDS</li>
           </ul>
         </div>
       </footer>

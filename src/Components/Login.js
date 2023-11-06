@@ -23,8 +23,12 @@ const LoginPage = () => {
     navigate(`/SignUp`);
   };
 
+  const handleCreateWholesaleClick = () => {
+    console.log(`Clicked on Create Wholesale Account`);
+    navigate(`/CreateWholesale`);
+  };
+
   const handleCloseCreateAccount = () => setShowCreateAccount(false);
-  const handleShowCreateAccount = () => setShowCreateAccount(true);
   const handleCloseForgotPassword = () => setShowForgotPassword(false);
   const handleShowForgotPassword = () => setShowForgotPassword(true);
 
@@ -69,7 +73,7 @@ const LoginPage = () => {
           </div>
 
           <div className='WSaccount'>
-          <Button className='WSaccountbtn' variant="link" onClick={handleShowCreateAccount} style={{textDecoration: 'none', color: 'gray', fontFamily: 'Arvo'}}>
+          <Button className='WSaccountbtn' variant="link" onClick={handleCreateWholesaleClick} style={{textDecoration: 'none', color: 'gray', fontFamily: 'Arvo'}}>
                 Create wholesale account 
           </Button>
           </div>

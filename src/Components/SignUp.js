@@ -24,6 +24,8 @@ const LoginPage = () => {
     navigate(`/Login`);
   };
 
+  
+
   return (
     <>
         <Navbar/>

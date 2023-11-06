@@ -13,6 +13,8 @@ import Login from './Components/Login';
 import SignUp from './Components/SignUp';
 import ScrollToTop from './Components/ScrollToTop';
 import BlogPost from './Components/BlogPost';
+import CreateWholesale from './Components/CreateWholesale';
+import SDS from './Components/SDS';
 
 
 // export default App;
@@ -97,6 +99,8 @@ function App() {
         <Route path="/Login" element={<Login/>}/>
         <Route path="/SignUp" element={<SignUp/>}/>
         <Route path="/BlogPost" element={<BlogPost date={date} headings={headings} content={content} />} />
+        <Route path="/CreateWholesale" element={<CreateWholesale />} />
+        <Route path="/SDS" element={<SDS />} />
       </Routes>  
     </div>
     </Router>
